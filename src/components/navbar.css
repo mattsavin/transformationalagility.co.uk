@@ -32,7 +32,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0 8px 16px;
+    padding: 8px 8px 8px 16px;
     list-style: none;
     height: 60px;
 }
@@ -68,4 +68,13 @@
 
 span {
     margin-left: 16px;
+}
+
+.title {
+    color: #ffffff;
+    width: 50%;
+    margin: auto;
+    padding: 16px 16px 16px 16px;
+    text-align: center;
+    text-justify: distribute;
 }
