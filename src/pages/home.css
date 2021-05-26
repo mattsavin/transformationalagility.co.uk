@@ -1,10 +1,10 @@
-.entry {
+.entry-home {
     background-image: url("/src/images/balloons-floating-opacity.jpg");
     background-position: 50% 70%;
     display: block;
     width: 100%;
     height: 100vh;
-    padding: 10vh 10% 10% 10%;
+    padding: 12vh 10% 10% 10%;
 }
 
 .header {
@@ -15,6 +15,7 @@
 
 .introduction {
     text-align: center;
+    vertical-align: middle;
     padding: 32px;
     margin: 64px 0 0 0;
     font-size: 1.75rem;
@@ -28,7 +29,7 @@
 }
 
 .box-title {
-    padding: 64px 0 0 0;
+    padding: 64px 20% 0 20%;
     font-size: 2rem;
  }
 
@@ -87,12 +88,7 @@
     height: auto;
 }
 
-.left {
-    float: left;
-    height: 600px;
-    width: 50%;
-    padding: 0;
-}
+.left,
 .right {
     float: left;
     height: 600px;
@@ -100,38 +96,71 @@
     padding: 0;
 }
 
-.second {
-    background-image: url("/src/images/solar-panels.jpg");
+.first, .fifth {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25% 50%;
 }
 
-.third {
+.second, .sixth {
     background-color: #222831;
     color: whitesmoke;
     justify-content: center;
 }
 
-.fourth {
+.third, .seventh {
     background-color: #222831;
     color: whitesmoke;
 }
 
-.fifth {
-    background-image: url("/src/images/mountain.jpg");
+.fourth, .eighth {;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25% 50%;
 }
 
+.box-image-1 {
+    background-image: url("/src/images/solar-panels.jpg");
+}
+
+.box-image-2 {
+    background-image: url("/src/images/mountain.jpg")
+}
+
+.box-image-3 {
+    background-image: url("/src/images/forest.jpg")
+}
+
+.box-image-4 {
+    background-image: url("/src/images/hot-air-balloon-fire.jpg")
+}
+
 .introduction-button {
-    margin: 10% 0 0 0;
+    margin: 64px 0 0 0;
+}
+
+.socials {
+    display: inline-block;
+    width: 100%;
+    padding: 64px 64px 64px 64px;
+    background-color: #ff6b26;
+    justify-content: center;
+    text-align: center;
+    align-items: normal;
+}
+
+.social-icon {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+.twitter-icon {
+    color: deepskyblue;
 }
 
 .footer {
     display: flex;
-    padding: 64px;
+    padding: 48px;
     background-color: #37414f;
     color: whitesmoke;
     text-align: center;
@@ -140,6 +169,9 @@
 
 
 @media (max-height: 900px) {
+    .introduction-button {
+        margin: 24px 0 0 0;
+    }
     .header {
         text-align: center;
         padding: 16px;
@@ -158,16 +190,33 @@
     .left, .right {
         width: 100%;
     }
-
-    .fourth {
+    .first {
+        order: 1;
+    }
+    .second {
         order: 2;
     }
+    .third {
+        order: 4;
+    }
+    .fourth {
+        order: 3;
+    }
     .fifth {
-        order: 1;
+        order: 5;
+    }
+    .sixth {
+        order: 6;
+    }
+    .seventh {
+        order: 8;
+    }
+    .eighth {
+        order: 7;
     }
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1200px){
     .header {
         text-align: center;
         padding: 16px;
@@ -186,12 +235,29 @@
     .left, .right {
         width: 100%;
     }
-
-    .fourth {
+    .first {
+        order: 1;
+    }
+    .second {
         order: 2;
     }
+    .third {
+        order: 4;
+    }
+    .fourth {
+        order: 3;
+    }
     .fifth {
-        order: 1;
+        order: 5;
+    }
+    .sixth {
+        order: 6;
+    }
+    .seventh {
+        order: 8;
+    }
+    .eighth {
+        order: 7;
     }
 }
 
@@ -213,12 +279,30 @@
     }
     .left, .right {
         width: 100%;
+        height: 100vh;
     }
-
-    .fourth {
+    .first {
+        order: 1;
+    }
+    .second {
         order: 2;
     }
+    .third {
+        order: 4;
+    }
+    .fourth {
+        order: 3;
+    }
     .fifth {
-        order: 1;
+        order: 5;
+    }
+    .sixth {
+        order: 6;
+    }
+    .seventh {
+        order: 8;
+    }
+    .eighth {
+        order: 7;
     }
 }
