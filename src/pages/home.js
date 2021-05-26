@@ -32,7 +32,7 @@ function home() {
                         Agility, we combine our insights and skills to transform your processes and strategies, and in
                         turn, your company. We’re proud to help shape and improve how our clients structure and manage
                         their business.</p>
-                    <button>Contact Us</button>
+                    <button className="contact-button">Contact Us</button>
                 </div>
                 <div className="fourth left">
                     <p>this is text</p>
