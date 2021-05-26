@@ -23,7 +23,7 @@
 .box {
     display: block;
     text-align: center;
-    padding: 16px;
+    padding: 5% 20% 0 20%;
     width: 100%;
 }
 
@@ -40,8 +40,8 @@
     font-size: 1rem;
 }
 
-.contact-button {
-    margin: 64px;
+.button {
+    margin: 32px 16px 32px 16px;
     width: 192px;
     height: 48px;
     color: whitesmoke;
@@ -50,33 +50,54 @@
     border: solid #ff6b26 2px;
     text-decoration: none;
 }
-.contact-button:hover {
+.button:hover {
     background-color: #ff6b26;
 }
 
 .preboxes-break {
     display: block;
-    height: 400px;
+    height: auto;
     width: 100%;
     color: whitesmoke;
     background-color: #72767d;
+    font-size: 1.5rem;
+}
+
+.prebox {
+    display: block;
+    text-align: center;
+    padding: 24px 32px 24px 32px;
+}
+
+.prebox-title {
+    font-size: 2rem;
+    padding: 32px 32px 24px 32px;
+}
+
+.prebox-paragraph {
+    font-size: 1rem;
+}
+
+.prebox-button {
+    margin: 48px;
 }
 
 .boxes {
     display: block;
+    height: auto;
 }
 
 .left {
     float: left;
     height: 600px;
     width: 50%;
-    padding: 16px;
+    padding: 0;
 }
 .right {
     float: left;
     height: 600px;
     width: 50%;
-    padding: 16px;
+    padding: 0;
 }
 
 .second {

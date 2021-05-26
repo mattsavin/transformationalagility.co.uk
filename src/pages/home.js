@@ -19,15 +19,15 @@ function home() {
                         business. Contact us today to schedule a consultation.
                     </p>
                     <form>
-                        <button type="submit" formAction="/contact" className="contact-button">Contact Us</button>
+                        <button type="submit" formAction="/contact" className="button">Contact Us</button>
                     </form>
                 </div>
             </div>
             <div className="preboxes-break">
-                <h1 className="box box-title">Our Services</h1>
-                <p className="box box-paragraph">Discover Our Expertise
+                <h1 className="prebox prebox-title">Our Services</h1>
+                <p className="prebox prebox-paragraph">Discover Our Expertise
                     <form>
-                        <button type="submit" formAction="/about" className="contact-button">Learn More</button>
+                        <button type="submit" formAction="/about" className="button prebox-button">Learn More</button>
                     </form>
                 </p>
             </div>
@@ -43,12 +43,21 @@ function home() {
                         turn, your company. We’re proud to help shape and improve how our clients structure and manage
                         their business.
                         <form>
-                            <button type="submit" formAction="/contact" className="contact-button">Contact Us</button>
+                            <button type="submit" formAction="/contact" className="button">Contact Us</button>
                         </form>
                     </p>
                 </div>
                 <div className="fourth left">
-                    <p>this is text</p>
+                    <h3 className="box box-title">Succeeding Through Agility</h3>
+                    <h4 className="box box-subtitle">Expert Guidance</h4>
+                    <p className="box box-paragraph">Looking to develop your business but not sure where to turn?
+                        Need help planning or executing your next project? Let us guide you. Any organization can move
+                        forward with small incremental changes, but building for the future in today’s rapidly evolving
+                        environment means taking bold chances and making insightful decisions.
+                        <form>
+                            <button type="submit" formAction="/contact" className="button">Contact Us</button>
+                        </form>
+                    </p>
                 </div>
                 <div className="fifth right">
                 </div>
