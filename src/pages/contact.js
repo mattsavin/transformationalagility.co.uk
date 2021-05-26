@@ -2,6 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./contact.css";
 import * as FAIcons from "react-icons/fa";
+import * as IOIcons from "react-icons/io";
+import * as RIIcons from "react-icons/ri";
 import smoothscroll from "smoothscroll-polyfill";
 
 smoothscroll.polyfill();
@@ -30,6 +32,18 @@ function contact() {
                     <h1>Contact Us</h1>
                 </div>
                 <div className="contact contact-info">
+                    <div className="contact-entry">
+                        <RIIcons.RiMailSendLine className="contact-icon"/>
+                        <p>
+                            <a href="mailto:00savin@gmail.com">Mike Savin</a>
+                        </p>
+                    </div>
+                    <div className="contact-entry">
+                        <FAIcons.FaPhoneAlt className="contact-icon"/>
+                        <p>
+                            <a href="tel:+447990658292">+44 7990 658 292</a>
+                        </p>
+                    </div>
 
                 </div>
             </div>
