@@ -5,7 +5,6 @@ function home() {
     return (
         <div className="home">
             <div className="entry">
-                <img className="background-image" src="/images/balloons-floating.jpg" alt="Balloons Floating" />
                 <h1>Transformational Agility for IT and Business Strategies</h1>
                 <br />
                 <p>Driving Business Flexibility, Growth mindset, Enabling Change across IT teams and integrating them back to the business
