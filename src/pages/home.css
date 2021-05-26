@@ -39,6 +39,20 @@
     font-size: 1rem;
 }
 
+.contact-button {
+    margin: 64px;
+    width: 192px;
+    height: 48px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background: none;
+    border: solid #ff6b26 2px;
+    text-decoration: none;
+}
+.contact-button:hover {
+    background-color: #ff6b26;
+}
+
 .boxes {
     display: block;
 }

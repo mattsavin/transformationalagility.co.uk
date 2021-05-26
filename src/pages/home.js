@@ -18,6 +18,9 @@ function home() {
                         Since 2010, we’ve helped our clients by delivering IT capabilities that transform the way they do
                         business. Contact us today to schedule a consultation.
                     </p>
+                    <form>
+                        <button type="submit" formAction="/contact" className="contact-button">Contact Us</button>
+                    </form>
                 </div>
 
             </div>
@@ -31,8 +34,11 @@ function home() {
                         capabilities and expertise to take your business to the next level. At Transformational Business
                         Agility, we combine our insights and skills to transform your processes and strategies, and in
                         turn, your company. We’re proud to help shape and improve how our clients structure and manage
-                        their business.</p>
-                    <button className="contact-button">Contact Us</button>
+                        their business.
+                        <form>
+                            <button type="submit" formAction="/contact" className="contact-button">Contact Us</button>
+                        </form>
+                    </p>
                 </div>
                 <div className="fourth left">
                     <p>this is text</p>
