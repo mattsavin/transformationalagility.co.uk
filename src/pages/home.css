@@ -1,5 +1,5 @@
 .entry {
-    background-image: url("/src/images/balloons-floating.jpg");
+    background-image: url("/src/images/balloons-floating-opacity.jpg");
     background-position: 50% 70%;
     display: block;
     width: 100%;
@@ -8,18 +8,47 @@
 }
 
 .entry h1 {
-    padding: 16px;
-    font-size: 2em;
+    text-align: center;
+    padding: 64px;
+    font-size: 4rem;
 }
 
 .entry p {
-    padding: 16px;
-    font-size: 1em;
+    text-align: center;
+    padding: 64px;
+    font-size: 1.5rem;
 }
 
-.second {
+.left {
     display: block;
-    height: 50vh;
+    float: left;
+    position:relative;
+    height: 70vh;
     width: 50%;
     padding: 16px;
 }
+.right {
+    display: block;
+    float: right;
+    position:relative;
+    height: 70vh;
+    width: 50%;
+    padding: 16px;
+}
+
+.second {
+    background-image: url("/src/images/solar-panels.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third {
+    background-color: #222831;
+    color: whitesmoke;
+}
+
+.fourth {
+    background-color: #222831;
+    color: whitesmoke;
+}
+

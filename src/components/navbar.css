@@ -75,8 +75,8 @@ span {
 .title {
     color: #ffffff;
     width: 50%;
-    margin: auto;
-    padding: 16px 16px 16px 16px;
+    margin:auto;
+    padding: 8px 16px 16px 16px;
     text-align: center;
     text-justify: distribute;
 }
@@ -88,6 +88,19 @@ span {
     border-radius: 4px;
 }
 
-.title a:hover {
-    background-color: #333333;
+.mobile {
+    display:none;
+}
+
+@media (max-width: 600px) {
+    .mobile {
+        display:block;
+        height: 5vh;
+        width: auto;
+        margin: auto;
+    }
+    .desktop {
+        display: none;
+        margin:auto;
+    }
 }
