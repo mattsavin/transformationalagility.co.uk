@@ -22,7 +22,14 @@ function home() {
                         <button type="submit" formAction="/contact" className="contact-button">Contact Us</button>
                     </form>
                 </div>
-
+            </div>
+            <div className="preboxes-break">
+                <h1 className="box box-title">Our Services</h1>
+                <p className="box box-paragraph">Discover Our Expertise
+                    <form>
+                        <button type="submit" formAction="/about" className="contact-button">Learn More</button>
+                    </form>
+                </p>
             </div>
             <div className="boxes">
                 <div className="second left">

@@ -1,7 +1,7 @@
 .navbar {
     position: fixed;
     position: -webkit-sticky;
-    background-color: #222831;
+    background-image: linear-gradient(to right, #191d24, #5f656b);
     width: 100%;
     height: 80px;
     display: flex;
@@ -94,12 +94,25 @@ span {
 }
 
 @media only screen and (max-width: 1000px) {
+    .title {
+        padding: 0;
+    }
+
+    .navbar {
+        background-image: none;
+        background-color: #222831;
+        justify-content: center;
+    }
+
     .mobile {
+        border-radius: 10px;
+        border: 2px solid white;
         display:block;
         height: 5vh;
         width: auto;
         margin: auto;
     }
+
     .desktop {
         display: none;
         margin:auto;
