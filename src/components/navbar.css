@@ -1,6 +1,6 @@
 .navbar {
+    position:sticky;
     position: -webkit-sticky;
-    position: sticky;
     background-color: #1c1c1c;
     height: 80px;
     display:flex;
@@ -79,4 +79,15 @@ span {
     padding: 16px 16px 16px 16px;
     text-align: center;
     text-justify: distribute;
+}
+
+.title a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.title a:hover {
+    background-color: #333333;
 }

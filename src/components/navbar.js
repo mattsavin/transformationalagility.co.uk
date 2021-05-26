@@ -4,7 +4,7 @@ import * as AIIcons from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { SidebarData } from "./sidebarData";
 import "./navbar.css"
-import { IconContext} from "react-icons";
+import { IconContext } from "react-icons";
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false)
@@ -19,7 +19,7 @@ function Navbar() {
                     <FAIcons.FaBars onClick={showSidebar} />
                 </Link>
                 <div className="title">
-                    <h1>Transformational Agility for Business</h1>
+                    <h1><a href="/">Transformational Agility for Business</a></h1>
                 </div>
 
             </div>

@@ -1,25 +1,32 @@
 .entry {
-    position: relative;
+    display: block;
     width: 100%;
-    height: 100%;
-    margin: 0 0 0 0;
-    justify-content: center;
-    padding: 16px 0 0 0;
-    background: mediumaquamarine;
-    flex-shrink: 0;
+    height: 90vh;
+    padding: 0;
 }
 
 .entry h1 {
-    font-size: 1em;
+    padding: 16px;
+    font-size: 2em;
 }
 
 .entry p {
-    font-size: 0.5em;
+    padding: 16px;
+    font-size: 1em;
 }
 
 .second {
+    display: block;
+    height: 50vh;
+    width: 50%;
+    padding: 16px;
+}
+
+.background-image {
     position: relative;
-    width: 100%;
-    justify-content: center;
-    padding: 16px 0 0 0;
+    z-index: -1;
+    object-fit: none;
+    object-position: 50% 70%;
+    width:100%;
+    height: 92vh;
 }
