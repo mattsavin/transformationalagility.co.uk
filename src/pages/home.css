@@ -9,14 +9,27 @@
 
 .header {
     text-align: center;
-    padding: 64px;
+    padding: 32px;
     font-size: 3rem;
 }
 
 .introduction {
     text-align: center;
-    padding: 64px;
+    padding: 32px;
+    margin: 64px 0 0 0;
     font-size: 1.75rem;
+}
+
+.box-title {
+
+}
+
+.box-subtitle {
+
+}
+
+.box-paragraph {
+
 }
 
 .boxes {
@@ -56,10 +69,13 @@
 }
 
 .fifth {
-    background-color: mediumaquamarine;
+    background-image: url("/src/images/mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 50%;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-height: 900px) {
     .header {
         text-align: center;
         padding: 16px;
@@ -87,3 +103,58 @@
     }
 }
 
+@media only screen and (max-width: 1100px){
+    .header {
+        text-align: center;
+        padding: 16px;
+        font-size: 1.5rem;
+    }
+
+    .introduction {
+        text-align: center;
+        padding: 8px;
+        font-size: 1.5rem;
+    }
+    .boxes {
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+
+    .fourth {
+        order: 2;
+    }
+    .fifth {
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .header {
+        text-align: center;
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    .introduction {
+        text-align: center;
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .boxes {
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+
+    .fourth {
+        order: 2;
+    }
+    .fifth {
+        order: 1;
+    }
+}
