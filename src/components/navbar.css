@@ -1,7 +1,7 @@
 .navbar {
     position: fixed;
     position: -webkit-sticky;
-    background-color: #1c1c1c;
+    background-color: #222831;
     width: 100%;
     height: 80px;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .nav-menu{
-    background-color: #1c1c1c;
+    background-color: #222831;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -61,7 +61,7 @@
 }
 
 .navbar-toggle {
-    background-color: #1c1c1c;
+    background-color: #222831;
     width: 100%;
     height: 80px;
     display: flex;

@@ -25,13 +25,14 @@ function home() {
                 <div className="second left">
                 </div>
                 <div className="third right">
-                    <h3 className="box-title">Enabling Transformational Change</h3>
-                    <h4 className="box-subtitle">Achieve Your Goals</h4>
-                    <p className="box-paragraph">With over 20 years of experience, our staff has the
+                    <h3 className="box box-title">Enabling Transformational Change</h3>
+                    <h4 className="box box-subtitle">Achieve Your Goals</h4>
+                    <p className="box box-paragraph">With over 20 years of experience, our staff has the
                         capabilities and expertise to take your business to the next level. At Transformational Business
                         Agility, we combine our insights and skills to transform your processes and strategies, and in
                         turn, your company. We’re proud to help shape and improve how our clients structure and manage
                         their business.</p>
+                    <button>Contact Us</button>
                 </div>
                 <div className="fourth left">
                     <p>this is text</p>
