@@ -19,7 +19,7 @@ function home() {
                         business. Contact us today to schedule a consultation.
                     </p>
                     <form>
-                        <button type="submit" formAction="/contact" className="button">Contact Us</button>
+                        <button type="submit" formAction="/contact" className="button introduction-button">Contact Us</button>
                     </form>
                 </div>
             </div>
@@ -63,7 +63,8 @@ function home() {
                 </div>
             </div>
             <div className="footer">
-                <p>&copy; Copyright 2021 Transformational Agility Ltd.</p>
+                <p className="copyright">&copy; Copyright 2021 Transformational Agility Ltd.</p>
+                <br />
             </div>
         </div>
     )
