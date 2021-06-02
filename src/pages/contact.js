@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./contact.css";
 import * as FAIcons from "react-icons/fa";
-import * as IOIcons from "react-icons/io";
 import * as RIIcons from "react-icons/ri";
 import smoothscroll from "smoothscroll-polyfill";
 
