@@ -3,7 +3,7 @@ html {
 }
 
 .entry-contact {
-    background-image: url("/src/images/contact-opactiy.jpg");
+    background-image: url("../images/contact-opactiy.jpg");
     background-position: 50% 70%;
     display: block;
     background-size: cover;

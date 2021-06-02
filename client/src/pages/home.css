@@ -1,5 +1,5 @@
 .entry-home {
-    background-image: url("/src/images/balloons-floating-opacity.jpg");
+    background-image: url("../images/balloons-floating-opacity.jpg");
     background-position: 50% 70%;
     display: block;
     width: 100%;
@@ -120,19 +120,19 @@
 }
 
 .box-image-1 {
-    background-image: url("/src/images/solar-panels.jpg");
+    background-image: url("../images/solar-panels.jpg");
 }
 
 .box-image-2 {
-    background-image: url("/src/images/mountain.jpg")
+    background-image: url("../images/mountain.jpg")
 }
 
 .box-image-3 {
-    background-image: url("/src/images/forest.jpg")
+    background-image: url("../images/forest.jpg")
 }
 
 .box-image-4 {
-    background-image: url("/src/images/hot-air-balloon-fire.jpg")
+    background-image: url("../images/hot-air-balloon-fire.jpg")
 }
 
 .introduction-button {
