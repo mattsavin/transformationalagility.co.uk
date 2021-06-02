@@ -25,4 +25,4 @@ yarn-error.log*
 
 # codestream
 
-.idea/codestream.xml
+/.idea/codestream.xml
