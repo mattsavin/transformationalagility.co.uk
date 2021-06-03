@@ -1,30 +1,19 @@
 import React from "react";
-import "./home.css";
 import { Link } from "react-router-dom";
 import * as FAIcons from "react-icons/fa";
+import { Welcome } from "../components/welcome";
+import * as content from "../content/home";
 
 function home() {
     return (
         <div className="home">
-            <div className="entry-home">
-                <div className="header">
-                    <h1>Transformational Agility for IT and Business</h1>
-                </div>
-                <div className="introduction">
-                     <p>
-                        Driving Business Flexibility, Growth mindset, Enabling Change across IT teams and integrating them
-                        back to the business
-                        <br />
-                        From implementing new business strategies to ultra-efficient work processes,
-                        Transformational Business agility is ready to tackle any challenge and put you on the path to success.
-                        Since 2010, we’ve helped our clients by delivering IT capabilities that transform the way they do
-                        business. Contact us today to schedule a consultation.
-                    </p>
-                    <form>
-                        <button type="submit" formAction="/contact" className="button introduction-button">Contact Us</button>
-                    </form>
-                </div>
-            </div>
+            <Welcome heading={content.heading}
+                     content={content.content}
+                     buttonContent={content.buttonContent}
+                     buttonLocation={content.buttonLocation}
+                     cssClass ={"home"}
+                     buttonClassName={"button introduction-button"}
+            />
             <div className="preboxes-break">
                 <h1 className="prebox prebox-title">Our Services</h1>
                 <p className="prebox prebox-paragraph">Discover Our Expertise

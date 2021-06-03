@@ -3,7 +3,6 @@ import * as FAIcons from "react-icons/fa";
 import * as AIIcons from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { SidebarData } from "./sidebarData";
-import "./navbar.css"
 import { IconContext } from "react-icons";
 
 function Navbar() {
@@ -19,8 +18,8 @@ function Navbar() {
                     <FAIcons.FaBars onClick={showSidebar} />
                 </Link>
                 <div className="title">
-                    <a href="/"><img src="/images/logo%20cheat.png" onClick="/" alt="Transformational Agility Logo" className="desktop"/></a>
-                    <a href="/"><img src="/images/logo%20small.png" onClick="/" alt="Transformational Agility Logo" className="mobile"/></a>
+                    <a href="/"><img src="../images/logo%20cheat.png" onClick="/" alt="Transformational Agility Logo" className="desktop"/></a>
+                    <a href="/"><img src="../images/logo%20small.png" onClick="/" alt="Transformational Agility Logo" className="mobile"/></a>
                 </div>
 
             </div>
