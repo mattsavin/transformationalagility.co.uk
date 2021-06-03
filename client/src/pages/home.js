@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as FAIcons from "react-icons/fa";
 import { Welcome } from "../components/welcome";
+import { Boxes} from "../components/boxes";
 import * as content from "../content/home";
 
 function home() {
@@ -14,6 +15,7 @@ function home() {
                      cssClass ={"home"}
                      buttonClassName={"button introduction-button"}
             />
+            <Boxes />
             <div className="preboxes-break">
                 <h1 className="prebox prebox-title">Our Services</h1>
                 <p className="prebox prebox-paragraph">Discover Our Expertise

@@ -9,7 +9,6 @@ export class Welcome extends React.Component {
                 type={"submit"}
                 formAction={this.props.buttonLocation}
                 className={this.props.buttonClassName}>
-
                 {this.props.buttonContent}
             </button>
         </form>
