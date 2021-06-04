@@ -2,28 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as FAIcons from "react-icons/fa";
 import { Welcome } from "../components/welcome";
-import { Boxes} from "../components/boxes";
 import * as content from "../content/home";
+import {Boxes} from "../components/boxes";
+import {BannerBreak} from "../components/banner-break";
 
 function home() {
     return (
         <div className="home">
-            <Welcome heading={content.heading}
-                     content={content.content}
-                     buttonContent={content.buttonContent}
-                     buttonLocation={content.buttonLocation}
+
+            <Welcome heading={content.intro.heading}
+                     content={content.intro.content}
+                     buttonContent={content.intro.buttonContent}
+                     buttonLocation={content.intro.buttonLocation}
                      cssClass ={"home"}
                      buttonClassName={"button introduction-button"}
             />
+
+            <BannerBreak title={content.break.title}
+                         content={content.break.content}
+                         buttonLocation={content.break.buttonLocation}
+                         buttonContent={content.break.buttonContent}
+
+            />
+
             <Boxes />
-            <div className="preboxes-break">
-                <h1 className="prebox prebox-title">Our Services</h1>
-                <p className="prebox prebox-paragraph">Discover Our Expertise
-                    <form>
-                        <button type="submit" formAction="/about" className="button prebox-button">Learn More</button>
-                    </form>
-                </p>
-            </div>
+
             <div className="boxes">
                 <div className="first left box-image-1">
                 </div>

@@ -1,20 +1,26 @@
 {
-  "heading": "Transformational Agility for IT and Business",
-  "content": "Driving Business Flexibility, Growth mindset, Enabling Change across IT teams and integrating them back to the business \n From implementing new business strategies to ultra-efficient work processes, Transformational Business agility is ready to tackle any challenge and put you on the path to success. Since 2010, we’ve helped our clients by delivering IT capabilities that transform the way they do business. Contact us today to schedule a consultation.",
-  "buttonContent": "Contact Us",
-  "buttonLocation": "/contact",
-  "buttonType": "submit",
+  "intro":{
+    "heading": "Transformational Agility for IT and Business",
+    "content": "Driving Business Flexibility, Growth mindset, Enabling Change across IT teams and integrating them back to the business \n From implementing new business strategies to ultra-efficient work processes, Transformational Business agility is ready to tackle any challenge and put you on the path to success. Since 2010, we’ve helped our clients by delivering IT capabilities that transform the way they do business. Contact us today to schedule a consultation.",
+    "buttonContent": "Contact Us",
+    "buttonLocation": "/contact"
+  },
+  "break": {
+    "title": "Our Services",
+    "content": "Discover Our Expertise",
+    "buttonLocation": "/about",
+    "buttonContent": "Learn More"
+  },
   "boxes": {
-    "1": {
-      "heading": "",
-      "subheading": "",
-      "content": ""
+    "first": {
+      "heading": "Enabling Transformational Change",
+      "subheading": "Achieve Your Goals",
+      "content": "With over 20 years of experience, our staff has the etc..."
     },
-    "2": {
-      "heading": "",
-      "subheading": "",
-      "content": ""
+    "second": {
+      "heading": "2heading",
+      "subheading": "2subheading",
+      "content": "2content"
     }
   }
-
 }

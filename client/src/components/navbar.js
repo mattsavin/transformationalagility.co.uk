@@ -18,8 +18,8 @@ function Navbar() {
                     <FAIcons.FaBars onClick={showSidebar} />
                 </Link>
                 <div className="title">
-                    <a href="/"><img src="../images/logo%20cheat.png" onClick="/" alt="Transformational Agility Logo" className="desktop"/></a>
-                    <a href="/"><img src="../images/logo%20small.png" onClick="/" alt="Transformational Agility Logo" className="mobile"/></a>
+                    <Link to="/"><img src="../images/logo%20cheat.png" alt="Transformational Agility Logo" className="desktop"/></Link>
+                    <Link to="/"><img src="../images/logo%20small.png" alt="Transformational Agility Logo" className="mobile"/></Link>
                 </div>
 
             </div>

@@ -1,30 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const nl2br = require('react-nl2br');
 
-export class Welcome extends React.Component {
-    render() {
-        this.button = <form>
-            <button
-                type={"submit"}
-                formAction={this.props.buttonLocation}
-                className={this.props.buttonClassName}>
-                {this.props.buttonContent}
-            </button>
-        </form>
+export function Welcome(props) {
 
-        return (
-            <>
-                <div className={"welcome welcome-" + this.props.cssClass}>
-                    <div className="header">
-                        <h1>{this.props.heading}</h1>
-                    </div>
-                    <div className="introduction">
-                        <p>{nl2br(this.props.content)}</p>
-                        {this.button}
-                    </div>
+    let button = <Link to={props.buttonLocation} className={props.buttonClassName}>
+        {props.buttonContent}
+    </Link>
+
+    return (
+        <>
+            <div className={"welcome welcome-" + props.cssClass}>
+                <div className="header">
+                    <h1>{props.heading}</h1>
                 </div>
-            </>
-        )
-    }
+                <div className="introduction">
+                    <p>{nl2br(props.content)}</p>
+                    {button}
+                </div>
+            </div>
+        </>
+    )
 }
