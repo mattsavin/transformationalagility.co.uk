@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as FAIcons from "react-icons/fa";
-import { Welcome } from "../components/welcome";
 import * as content from "../content/home";
-import {Boxes} from "../components/boxes";
+import { Boxes }  from "../components/boxes";
 import {BannerBreak} from "../components/banner-break";
+import { Welcome } from "../components/welcome";
 
 function home() {
     return (
@@ -24,8 +24,10 @@ function home() {
                          buttonContent={content.break.buttonContent}
 
             />
+            <div className={"boxes"}>
+                <Boxes boxes={content.boxes}/>
+            </div>
 
-            <Boxes />
 
             <div className="boxes">
                 <div className="first left box-image-1">

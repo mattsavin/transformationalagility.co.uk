@@ -13,14 +13,44 @@
   },
   "boxes": {
     "first": {
+      "justify": "left",
+      "backgroundImage": "../images/solar-panels.jpg"
+    },
+    "second": {
+      "justify": "right",
       "heading": "Enabling Transformational Change",
       "subheading": "Achieve Your Goals",
       "content": "With over 20 years of experience, our staff has the etc..."
     },
-    "second": {
-      "heading": "2heading",
-      "subheading": "2subheading",
-      "content": "2content"
+    "third": {
+      "justify": "left",
+      "heading": "3heading",
+      "subheading": "3subheading",
+      "content": "3content"
+    },
+    "fourth": {
+      "justify": "right",
+      "backgroundImage": "../images/mountain.jpg"
+    },
+    "fifth": {
+      "justify": "left",
+      "backgroundImage": "../images/forest.jpg"
+    },
+    "sixth": {
+      "justify": "right",
+      "heading": "5heading",
+      "subheading": "5subheading",
+      "content": "5content"
+    },
+    "seventh": {
+      "justify": "left",
+      "heading": "5heading",
+      "subheading": "5subheading",
+      "content": "5content"
+    },
+    "eighth": {
+      "justify": "right",
+      "backgroundImage": "./images/hot-air-balloon-fire.jpg"
     }
   }
 }
