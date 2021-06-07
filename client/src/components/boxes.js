@@ -32,6 +32,7 @@ export function Boxes(props) {
             }
         }
     }
+
     return (
         <>
             {content}
