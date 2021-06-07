@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./css/App.css";
 import Navbar from "./components/navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import home from "./pages/home";
@@ -19,14 +19,14 @@ class App extends Component {
             .then(res => this.setState({ apiResponse: res }));
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.callAPI();
     }
 
     render () {
+        console.log(this.state.apiResponse);
         return (
             <>
-                <p className="App-intro">{this.state.apiResponse}</p>
                 <Router>
                     <Navbar />
                     <Switch>

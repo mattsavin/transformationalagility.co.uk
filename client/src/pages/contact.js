@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./contact.css";
 import * as FAIcons from "react-icons/fa";
 import * as RIIcons from "react-icons/ri";
 import smoothscroll from "smoothscroll-polyfill";
 import { init } from 'emailjs-com';
+import { Welcome} from "../components/welcome";
+import * as content from "../content/contact";
 
 
 init("user_c02JIaEj90UAVhXU8Op5n");
@@ -14,20 +15,12 @@ window.__forceSmoothScrollPolyfill__ = true;
 function contact() {
     return (
         <div className="contact">
-            <div className="entry-contact">
-                <div className="header">
-                    <h1>Contact Us</h1>
-                </div>
-                <div className="introduction">
-                    <p>
-                        If you have any questions or queries, or would like to enquire about our services, our team
-                        is but a short email away.
-                        <br />
-                        We'll be sure to get back to you as soon as possible
-                        <a className="ct-btn-scroll" href="#section2"><img alt="Arrow Down Icon" src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png" /></a>
-                    </p>
-                </div>
-            </div>
+            <Welcome heading={content.heading}
+                     content={content.content}
+                     cssClass={"contact"}
+                     buttonContent={<img alt="Arrow Down Icon" src={content.imageURL} />}
+                     buttonClassName={"ct-btn-scroll"}
+                     buttonLocation={content.buttonLocation}/>
             <div className="contact-holder" id="section2">
                 <div className="contact contact-title">
                     <h1>Contact Us</h1>
