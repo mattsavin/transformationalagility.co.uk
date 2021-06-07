@@ -2,7 +2,7 @@
   "heading": "Contact Us",
   "content": "If you have any questions or queries, or would like to enquire about our services, our team is but a short email away.\nWe'll be sure to get back to you as soon as possible",
   "buttonContent": "",
-  "buttonLocation": "#section2",
+  "buttonLocation": "/contact#contact-info",
   "buttonType": "submit",
   "imageURL": "https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"
 }

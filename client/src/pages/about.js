@@ -1,10 +1,19 @@
 import React from "react";
+import {Welcome} from "../components/welcome";
+import * as content from "../content/about.json";
 
 function about() {
     return (
-        <div className="about">
-            <h1>About</h1>
-        </div>
+        <>
+            <Welcome heading={content.intro.heading}
+                     content={content.intro.content}
+                     buttonContent={content.intro.buttonContent}
+                     buttonLocation={content.intro.buttonLocation}
+                     cssClass ={"home"}
+                     buttonClassName={"button introduction-button"}
+            />
+        </>
+
     )
 }
 
