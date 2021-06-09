@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import * as FAIcons from "react-icons/fa";
 import * as content from "../content/home";
 import { Boxes }  from "../components/boxes";

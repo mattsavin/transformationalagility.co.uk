@@ -21,8 +21,8 @@ function Navbar() {
                 </div>
 
                 <div className="title">
-                    <Link to="/"><img src="../images/logo%20cheat.png" alt="Transformational Agility Logo" className="desktop"/></Link>
-                    <Link to="/"><img src="../images/logo%20small.png" alt="Transformational Agility Logo" className="mobile"/></Link>
+                    <Link to="/#top"><img src="../images/logo%20cheat.png" alt="Transformational Agility Logo" className="desktop"/></Link>
+                    <Link to="/#top"><img src="../images/logo%20small.png" alt="Transformational Agility Logo" className="mobile"/></Link>
                 </div>
 
                 <div className={"menu-bars"}>

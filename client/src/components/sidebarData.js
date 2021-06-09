@@ -18,6 +18,12 @@ export const SidebarData = [
         cName: "nav-text"
     },
     {
+        title: "Case Studies",
+        path: "/casestudies",
+        icon: <AIIcons.AiFillFolder />,
+        cName: "nav-text"
+    },
+    {
         title: "Blog",
         path: "/blog",
         icon: <BSIcons.BsFileText />,

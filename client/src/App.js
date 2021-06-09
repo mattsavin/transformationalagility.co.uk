@@ -6,6 +6,7 @@ import home from "./pages/home";
 import about from "./pages/about";
 import contact from "./pages/contact";
 import blog from "./pages/blog";
+import casestudies from "./pages/casestudies";
 
 class App extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={home}/>
                         <Route path="/about" exact component={about}/>
+                        <Route path="/casestudies" exact component={casestudies}/>
                         <Route path="/blog" exact component={blog}/>
                         <Route path="/contact" exact component={contact}/>
                     </Switch>
