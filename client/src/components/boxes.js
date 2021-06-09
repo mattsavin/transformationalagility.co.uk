@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 const path = require('path');
 
 export function Boxes(props) {
@@ -9,7 +9,7 @@ export function Boxes(props) {
             if (key % 2 === 0) { justify = "left"; } else if (key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!")}
             if ((key - 1) % 4 === 1 || (key - 1) % 4 === 2) {
                 content.push(
-                    <div className={`box-${key} ${justify}`}>
+                    <div className={`box box-${key} ${justify}`}>
                         <h3 className={"box box-title"}>
                             {props.boxes[key].heading}
                         </h3>
@@ -20,7 +20,7 @@ export function Boxes(props) {
                             {props.boxes[key].content}
                         </p>
                         <div className={"center"}>
-                            <Link to={props.boxes[key].buttonLocation} className={`button box-button`}>
+                            <Link to={`${props.boxes[key].buttonLocation}#top`} className={`button box-button center`}>
                                 {props.boxes[key].buttonContent}
                             </Link>
                         </div>

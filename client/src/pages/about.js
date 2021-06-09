@@ -10,7 +10,6 @@ function about() {
                      buttonContent={content.intro.buttonContent}
                      buttonLocation={content.intro.buttonLocation}
                      cssClass ={"home"}
-                     buttonClassName={"button introduction-button"}
             />
         </>
 

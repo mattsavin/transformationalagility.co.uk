@@ -6,13 +6,16 @@ export function BannerBreak(props) {
         <>
             <div className="break-section">
                 <h1 className={"break break-title"}>{props.title}</h1>
-                <p className={"break break-content"}>
-                    {props.content} <br />
+                <p className={"break break-content center"}>
+                    {props.content}
+
+                </p>
+                <div className={"center"}>
                     <Link to={props.buttonLocation}
-                    className={"button break-button"}>
+                          className={"button center"}>
                         {props.buttonContent}
                     </Link>
-                </p>
+                </div>
             </div>
         </>
     );

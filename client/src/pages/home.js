@@ -15,7 +15,6 @@ function home() {
                      buttonContent={content.intro.buttonContent}
                      buttonLocation={content.intro.buttonLocation}
                      cssClass ={"home"}
-                     buttonClassName={"button introduction-button"}
             />
 
             <BannerBreak title={content.break.title}

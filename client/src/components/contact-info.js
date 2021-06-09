@@ -1,6 +1,6 @@
 import * as RIIcons from "react-icons/ri";
 
-export function ContactInfo (props) {
+export function ContactInfo () {
     return (
       <>
           <div className={"contact-holder"} id={"contact-info"}>
