@@ -1,6 +1,7 @@
 import React from "react";
 import {Welcome} from "../components/welcome";
 import * as content from "../content/about.json";
+import { Footer } from "../components/footer";
 
 function about() {
     return (
@@ -11,6 +12,8 @@ function about() {
                      buttonLocation={content.intro.buttonLocation}
                      cssClass ={"home"}
             />
+
+            <Footer />
         </>
 
     )
