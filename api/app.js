@@ -1,17 +1,33 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require("cors");
+//const createError = require('http-errors');
+const express = require('express');
+//const path = require('path');
+//const cookieParser = require('cookie-parser');
+//const logger = require('morgan');
+//const cors = require("cors");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var testAPIRouter = require("./routes/testAPI");
+//const indexRouter = require('./routes/index');
+//const usersRouter = require('./routes/users');
+//const testAPIRouter = require("./routes/testAPI");
 
-var app = express();
+const app = express();
 
-// view engine setup
+// Bodyparser middleware
+app.use(bodyParser.json());
+
+// DB Config
+const db = require( "./config/keys");
+
+// Connect to MongoDB
+mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log("MongoDB Connection Successful!"))
+    .catch(err => console.log(err));
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server started on port ${port}`));
+
+/*// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -43,3 +59,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+*/

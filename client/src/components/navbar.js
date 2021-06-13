@@ -5,10 +5,18 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { SidebarData } from "./sidebarData";
 import { IconContext } from "react-icons";
 
+let rotation = 0;
+
 function Navbar() {
     const [sidebar, setSidebar] = useState(false)
 
-    const showSidebar = () => setSidebar(!sidebar)
+    const showSidebar = () => {
+        rotation += 180;
+        setSidebar(!sidebar);
+        document.querySelector("#navArrows").style.transform = `rotate(${rotation}deg)`;
+        document.querySelector("#navArrows").style.transition = `transform 500ms ease-in-out`;
+    }
+
 
     return (
         <>
@@ -16,7 +24,8 @@ function Navbar() {
             <div className="navbar">
                 <div className={"menu-bars"}>
                     <Link to="#">
-                        <FAIcons.FaBars onClick={showSidebar} />
+                        <FAIcons.FaAngleDoubleRight onClick={showSidebar} id={"navArrows"}/>
+                        {/*sidebar ? <AIIcons.AiOutlineClose onClick={showSidebar} /> : <FAIcons.FaAngleDoubleRight onClick={showSidebar} /> */}
                     </Link>
                 </div>
 
@@ -24,19 +33,18 @@ function Navbar() {
                     <Link to="/#top"><img src="../images/logo%20cheat.png" alt="Transformational Agility Logo" className="desktop"/></Link>
                     <Link to="/#top"><img src="../images/logo%20small.png" alt="Transformational Agility Logo" className="mobile"/></Link>
                 </div>
-
-                <div className={"menu-bars"}>
-
-                </div>
-
+                <div className={"menu-bars"}> </div>
             </div>
 
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                 <ul className="nav-menu-items" onClick={showSidebar}>
                     <li className="navbar-toggle">
-                        <Link to="" className="menu-bars">
-                            <AIIcons.AiOutlineClose />
-                        </Link>
+                        <div className={"menu-bars"}>
+                            <Link to="#" className="menu-bars">
+                                <AIIcons.AiOutlineClose />
+                            </Link>
+                        </div>
+
                     </li>
                     {SidebarData.map((item, index) => {
                         return (

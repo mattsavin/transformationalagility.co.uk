@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
+:root {
+    --transition-speed: 500ms;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -350,11 +354,11 @@ html {
     z-index: 4;
     top: 0;
     left: -100%;
-    transition: 850ms;
+    transition: var(--transition-speed) ease;
 }
 .nav-menu.active {
     left: 0;
-    transition: 350ms;
+    transition: var(--transition-speed) ease;
 }
 
 .nav-text {
@@ -393,6 +397,17 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+
+.navArrows {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.navArrows:hover {
+    transform: rotate(180deg);
+    transition: transform var(--transition-speed) ease-in-out;
 }
 
 span {
@@ -467,3 +482,4 @@ span {
     justify-content: center;
     align-items: center;
 }
+
