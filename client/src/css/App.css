@@ -424,6 +424,15 @@ span {
     display: flex;
     color: black;
 }
+
+.alert {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #ff5e5e;
+    border-radius: 8px;
+}
+
+
 @media only screen and (max-width: 1200px){
     .header {
         text-align: center;

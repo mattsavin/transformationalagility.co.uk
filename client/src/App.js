@@ -29,8 +29,8 @@ class App extends Component {
         // console.log(this.state.apiResponse);
         return (
             <>
-                <AuthProvider>
-                    <Router>
+                <Router>
+                    <AuthProvider>
                         <Navbar />
                         <Switch>
                             <Route path="/" exact component={home}/>
@@ -40,9 +40,9 @@ class App extends Component {
                             <Route path="/contact" exact component={contact}/>
                             <Route path="/login" exact component={login}/>
                         </Switch>
-                    </Router>
-                </AuthProvider>
+                    </AuthProvider>
 
+                </Router>
             </>
         );
     }
