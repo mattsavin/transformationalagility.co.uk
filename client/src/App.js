@@ -49,7 +49,6 @@ class App extends Component {
                             <PrivateRoute path={"/dashboard"} exact component={dashboard} />
                         </Switch>
                     </AuthProvider>
-
                 </Router>
             </>
         );
