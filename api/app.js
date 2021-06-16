@@ -7,6 +7,8 @@ const express = require('express');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
+const items = require("./routes/api/items");
+
 //const indexRouter = require('./routes/index');
 //const usersRouter = require('./routes/users');
 //const testAPIRouter = require("./routes/testAPI");
@@ -24,8 +26,32 @@ mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("MongoDB Connection Successful!"))
     .catch(err => console.log(err));
 
-const port = process.env.PORT || 5000;
+// Use routes
+
+app.use("/api/items", items);
+
+const port = process.env.PORT || 9000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
+
+const { auth } = require('express-openid-connect');
+
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: 'a long, randomly-generated string stored in env',
+    baseURL: 'http://localhost:3000',
+    clientID: 'KwThVdVsHcnomlhWubFqCu5hQ9NYJd5p',
+    issuerBaseURL: 'https://transformationalagility.eu.auth0.com'
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
 
 /*// view engine setup
 app.set('views', path.join(__dirname, 'views'));

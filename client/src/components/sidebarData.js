@@ -3,6 +3,7 @@ import * as FAIcons from 'react-icons/fa';
 import * as AIIcons from 'react-icons/ai';
 import * as IOIcons from 'react-icons/io';
 import * as BSIcons from 'react-icons/bs';
+import * as FIIcons from 'react-icons/fi';
 
 export const SidebarData = [
     {
@@ -33,6 +34,12 @@ export const SidebarData = [
         title: "Contact",
         path: "/contact",
         icon: <FAIcons.FaPhoneAlt />,
+        cName: "nav-text"
+    },
+    {
+        title: "Login",
+        path: "/login",
+        icon: <FIIcons.FiLogIn />,
         cName: "nav-text"
     },
 
