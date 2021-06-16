@@ -1,13 +1,12 @@
 import React from "react";
 import Login from "../components/login";
+import {Footer} from "../components/footer";
 
-const login = () => {
-
+export default function login() {
     return (
-      <>
-          <Login />
-      </>
+        <>
+            <Login />
+            <Footer />
+        </>
     );
 }
-
-export default login;

@@ -4,12 +4,19 @@ import * as AIIcons from 'react-icons/ai';
 import * as IOIcons from 'react-icons/io';
 import * as BSIcons from 'react-icons/bs';
 import * as FIIcons from 'react-icons/fi';
+import * as RIIcons from 'react-icons/ri';
 
 export const SidebarData = [
     {
         title: "Home",
         path: "/",
         icon: <AIIcons.AiFillHome />,
+        cName: "nav-text"
+    },
+    {
+        title: "Dashboard",
+        path: "/dashboard",
+        icon: <RIIcons.RiDashboardFill />,
         cName: "nav-text"
     },
     {
@@ -20,7 +27,7 @@ export const SidebarData = [
     },
     {
         title: "Case Studies",
-        path: "/casestudies",
+        path: "/caseStudies",
         icon: <AIIcons.AiFillFolder />,
         cName: "nav-text"
     },

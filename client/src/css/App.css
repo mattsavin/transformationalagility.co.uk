@@ -425,13 +425,30 @@ span {
     color: black;
 }
 
-.alert {
+.alert-danger {
     margin: 0.5rem;
     padding: 1rem;
     background-color: #ff5e5e;
     border-radius: 8px;
 }
 
+.alert-success {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: green;
+    border-radius: 8px;
+}
+
+.dashboard-body {
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    padding: 120px 2rem 2rem 2rem;
+    background: url("../images/mountain-background.jpg") 50% 50%;
+}
 
 @media only screen and (max-width: 1200px){
     .header {

@@ -1,13 +1,12 @@
 import React from "react";
 import Signup from "../components/signup";
+import {Footer} from "../components/footer";
 
-const signup = () => {
-
+export default function signup() {
     return (
         <>
             <Signup />
+            <Footer />
         </>
     );
 }
-
-export default signup;

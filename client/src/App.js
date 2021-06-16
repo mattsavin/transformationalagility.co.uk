@@ -5,9 +5,14 @@ import home from "./pages/home";
 import about from "./pages/about";
 import contact from "./pages/contact";
 import blog from "./pages/blog";
-import casestudies from "./pages/casestudies";
+import caseStudies from "./pages/caseStudies";
 import login from "./pages/login";
-import {AuthProvider} from "./context/AuthContext";
+import signup from "./pages/signup";
+import {AuthProvider} from "./contexts/AuthContext";
+import dashboard from "./pages/dashboard";
+import PrivateRoute from "./components/privateRoute";
+import forgotPassword from "./pages/forgotPassword";
+import updateProfile from "./pages/updateProfile";
 
 class App extends Component {
     /*constructor(props) {
@@ -26,7 +31,6 @@ class App extends Component {
     }*/
 
     render () {
-        // console.log(this.state.apiResponse);
         return (
             <>
                 <Router>
@@ -35,10 +39,14 @@ class App extends Component {
                         <Switch>
                             <Route path="/" exact component={home}/>
                             <Route path="/about" exact component={about}/>
-                            <Route path="/casestudies" exact component={casestudies}/>
+                            <Route path="/caseStudies" exact component={caseStudies}/>
                             <Route path="/blog" exact component={blog}/>
                             <Route path="/contact" exact component={contact}/>
                             <Route path="/login" exact component={login}/>
+                            <Route path="/signup" exact component={signup}/>
+                            <Route path={"/forgot-password"} exact component={forgotPassword} />
+                            <Route path={"/update-profile"} exact component={updateProfile} />
+                            <PrivateRoute path={"/dashboard"} exact component={dashboard} />
                         </Switch>
                     </AuthProvider>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {Welcome} from "../components/welcome";
 
-function casestudies() {
+function caseStudies() {
     return (
         <>
             <Welcome />
@@ -10,4 +10,4 @@ function casestudies() {
     );
 }
 
-export default casestudies;
+export default caseStudies;
