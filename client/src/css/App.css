@@ -450,6 +450,17 @@ span {
     background: url("../images/mountain-background.jpg") 50% 50%;
 }
 
+.blog-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #222831;
+    color: whitesmoke;
+}
+
 @media only screen and (max-width: 1200px){
     .header {
         text-align: center;
