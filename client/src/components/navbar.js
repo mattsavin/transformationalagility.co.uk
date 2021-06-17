@@ -4,6 +4,8 @@ import * as AIIcons from "react-icons/ai";
 import { HashLink as Link } from 'react-router-hash-link';
 import { SidebarData } from "./sidebarData";
 import { IconContext } from "react-icons";
+import logo from "../images/logo.png";
+import logo_small from "../images/logo_small.png";
 
 let rotation = 0;
 
@@ -25,13 +27,12 @@ function Navbar() {
                 <div className={"menu-bars"}>
                     <Link to="#">
                         <FAIcons.FaAngleDoubleRight onClick={showSidebar} id={"navArrows"}/>
-                        {/*sidebar ? <AIIcons.AiOutlineClose onClick={showSidebar} /> : <FAIcons.FaAngleDoubleRight onClick={showSidebar} /> */}
                     </Link>
                 </div>
 
                 <div className="title">
-                    <Link to="/#top"><img src="../images/logo%20cheat.png" alt="Transformational Agility Logo" className="desktop"/></Link>
-                    <Link to="/#top"><img src="../images/logo%20small.png" alt="Transformational Agility Logo" className="mobile"/></Link>
+                    <Link to="/#top"><img src={logo} alt="Transformational Agility Logo" className="desktop"/></Link>
+                    <Link to="/#top"><img src={logo_small} alt="Transformational Agility Logo" className="mobile"/></Link>
                 </div>
                 <div className={"menu-bars"}> </div>
             </div>

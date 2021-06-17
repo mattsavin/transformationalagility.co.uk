@@ -9,14 +9,11 @@ export default class BlogArticles extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9000/api/blog")
+		fetch("/api/blog")
 			.then(res => res.json())
 			.then(blog => this.setState({blog}
 			));
 	}
-
-
-
 
 	render() {
 		let content = [];
@@ -26,6 +23,7 @@ export default class BlogArticles extends Component {
 					<div className={"blog-entry"}>
 						<h1>{this.state.blog[key].Title}</h1>
 						<p>{this.state.blog[key].Content}</p>
+						<img src={this.state.blog[key].image} alt={"Blog Post Image"}/>
 					</div>
 				);
 			}

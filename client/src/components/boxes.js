@@ -11,21 +11,22 @@ export function Boxes(props) {
 			if ((key - 1) % 4 === 1 || (key - 1) % 4 === 2) {
 				content.push(
 					<div className={`box box-${key} ${justify}`}>
-						<h3 className={"box box-title"}>
-							{props.boxes[key].heading}
-						</h3>
-						<h4 className={"box box-subtitle"}>
-							{props.boxes[key].subheading}
-						</h4>
-						<p className={"box box-paragraph"}>
-							{props.boxes[key].content}
-						</p>
-						<div className={"center"}>
-							<Link to={`${props.boxes[key].buttonLocation}#top`} className={"button box-button center"}>
-								{props.boxes[key].buttonContent}
-							</Link>
+						<div className={"box-width"}>
+							<h3 className={"box box-title"}>
+								{props.boxes[key].heading}
+							</h3>
+							<h4 className={"box box-subtitle"}>
+								{props.boxes[key].subheading}
+							</h4>
+							<p className={"box box-paragraph"}>
+								{props.boxes[key].content}
+							</p>
+							<div className={"center"}>
+								<Link to={`${props.boxes[key].buttonLocation}#top`} className={"button box-button center"}>
+									{props.boxes[key].buttonContent}
+								</Link>
+							</div>
 						</div>
-
 					</div>
 				);
 			} else {

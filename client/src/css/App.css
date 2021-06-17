@@ -93,6 +93,10 @@ html {
 .box-paragraph {
 }
 
+.box-width {
+    max-width: 600px;
+}
+
 .button {
     display: flex;
     text-align: center;
