@@ -4,7 +4,7 @@
   "dependencies": {
   },
   "scripts": {
-    "start": "concurrently \"cd client; npm start\" \"cd api; npm run nodemon\"",
-    "run": "cd api; yarn start"
+    "concurrently": "concurrently \"cd client; npm start\" \"cd api; npm run nodemon\"",
+    "start": "cd api; npm run start"
   }
 }
