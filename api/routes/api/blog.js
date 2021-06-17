@@ -3,10 +3,14 @@ const router = express.Router();
 const cors = require("cors");
 
 const admin = require("firebase-admin");
-const serviceAccount = require("../../firebase-creds.json");
+// const serviceAccount = require("../../firebase-creds.json");
 
 admin.initializeApp({
-	credential: admin.credential.cert(serviceAccount)
+	credential: admin.credential.cert({
+    "project_id": process.env.FIREBASE_PROJECT_ID,
+    "private_key": process.env.FIREBASE_PRIVATE_KEY,
+    "client_email": process.env.FIREBASE_CLIENT_EMAIL
+  })
 });
 const db = admin.firestore();
 
