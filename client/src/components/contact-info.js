@@ -11,7 +11,7 @@ export function ContactInfo () {
                 <div className="contact-entry">
                     <RIIcons.RiMailSendLine className="contact-icon"/>
                     <p>
-                        <a href="mailto:00savin@gmail.com">Mike Savin</a>
+                        <a href="mailto:example@example.com">Email Support</a>
                     </p>
                 </div>
             </div>
