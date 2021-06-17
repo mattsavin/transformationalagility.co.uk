@@ -1,0 +1,9 @@
+{
+  "name": "transformationalagility.co.uk",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "concurrently \"cd client; npm start\" \"cd api; npm run nodemon\""
+  }
+}
