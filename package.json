@@ -5,6 +5,6 @@
   },
   "scripts": {
     "concurrently": "concurrently \"cd client; npm start\" \"cd api; npm run nodemon\"",
-    "start": "cd api; npm run start"
+    "start": "cd api; npm install; cd api; npm run start"
   }
 }
