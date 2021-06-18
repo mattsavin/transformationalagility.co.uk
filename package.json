@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./app.js",
-    "concurrently": "concurrently \"cd api; npm run nodemon\" \"cd client; npm start\""
+    "concurrently": "concurrently \"cd api && npm run nodemon\" \"cd client && npm run start\""
   },
   "dependencies": {
     "concurrently": "^6.2.0"
