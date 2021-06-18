@@ -19,9 +19,9 @@ export default class BlogArticles extends Component {
 		let content = [];
 
 		this.state.blog.forEach((element) => {
+				<p>{element.Content}</p>
 			content.push(<div className={"blog-entry"}>
 				<h1>{element.Title}</h1>
-				<p>{element.Content}</p>
 				<img src={element.image} alt={"Blog Post"}/>
 			</div>)
 		});
