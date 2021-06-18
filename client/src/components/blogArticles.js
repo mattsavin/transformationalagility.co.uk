@@ -23,7 +23,7 @@ export default class BlogArticles extends Component {
 					<div className={"blog-entry"}>
 						<h1>{this.state.blog[key].Title}</h1>
 						<p>{this.state.blog[key].Content}</p>
-						<img src={this.state.blog[key].image} alt={"Blog Post Image"}/>
+						<img src={this.state.blog[key].image} alt={"Blog Post"}/>
 					</div>
 				);
 			}

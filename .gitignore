@@ -29,3 +29,9 @@ yarn-error.log*
 # codestream
 
 /.idea/codestream.xml
+
+node_modules
+/client/package-lock.json
+/client/yarn.lock
+/api/package-lock.json
+/api/yarn.lock

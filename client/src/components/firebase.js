@@ -2,13 +2,13 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-	apiKey: process.env.REACT_APP_FIREBSAE_API_KEY,
-	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-	appId: process.env.REACT_APP_FIREBASE_APP_ID,
-	measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+	apiKey: "AIzaSyCGhVse_nCkNJNF9v8zRnOMID1Wmg6KEmg",
+	authDomain: "transformationalagility.firebaseapp.com",
+	projectId: "transformationalagility",
+	storageBucket: "transformationalagility.appspot.com",
+	messagingSenderId: "181454487168",
+	appId: "1:181454487168:web:818703de129e5e96b9f065",
+	measurementId: "G-245W20GPDT"
 
 });
 
