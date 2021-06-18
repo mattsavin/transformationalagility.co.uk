@@ -3,10 +3,10 @@ import Signup from "../components/signup";
 import {Footer} from "../components/footer";
 
 export default function signup() {
-    return (
-        <>
-            <Signup />
-            <Footer />
-        </>
-    );
+	return (
+		<>
+			<Signup />
+			<Footer />
+		</>
+	);
 }

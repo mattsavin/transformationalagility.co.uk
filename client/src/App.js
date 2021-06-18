@@ -14,6 +14,8 @@ import PrivateRoute from "./components/privateRoute";
 import forgotPassword from "./pages/forgotPassword";
 import updateProfile from "./pages/updateProfile";
 
+//TODO: Add PropTypes validation
+
 class App extends Component {
 	render() {
 		return (

@@ -9,20 +9,20 @@ smoothscroll.polyfill();
 window.__forceSmoothScrollPolyfill__ = true;
 
 function contact() {
-    return (
-        <div className="contact">
-            <Welcome heading={content.heading}
-                     content={content.content}
-                     cssClass={"contact"}
-                     buttonContent={<img alt="Arrow Down Icon" src={content.imageURL} />}
-                     buttonClassName={"ct-btn-scroll"}
-                     buttonLocation={content.buttonLocation}/>
+	return (
+		<div className="contact">
+			<Welcome heading={content.heading}
+				content={content.content}
+				cssClass={"contact"}
+				buttonContent={<img alt="Arrow Down Icon" src={content.imageURL} />}
+				buttonClassName={"ct-btn-scroll"}
+				buttonLocation={content.buttonLocation}/>
 
-            <ContactInfo />
+			<ContactInfo />
 
-            <Footer />
-        </div>
-    )
+			<Footer />
+		</div>
+	);
 }
 
-export default contact
+export default contact;
