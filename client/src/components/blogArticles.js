@@ -24,7 +24,8 @@ export default class BlogArticles extends Component {
 				<p>{element.Content}</p>
 				<img src={element.image} alt={"Blog Post"}/>
 			</div>)
-		})
+		});
+
 		return (
 			<div id={"articles"}>
 				{content}
