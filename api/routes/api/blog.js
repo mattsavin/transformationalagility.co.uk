@@ -3,7 +3,7 @@ const router = express.Router();
 const cors = require("cors");
 
 const admin = require("firebase-admin");
-const serviceAccount = require("../../transformationalagility-firebase-adminsdk-4e03z-64480f19af.json");
+const serviceAccount = require("../../transformationalagility-firebase-adminsdk-4e03z-0824c121e6.json");
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount)
