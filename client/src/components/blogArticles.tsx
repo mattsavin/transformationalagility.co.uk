@@ -16,7 +16,7 @@ export default class BlogArticles extends Component {
 	}
 
 	render() {
-		let content = [];
+		const content = [];
 
 		this.state.blog.forEach((element) => {
 			content.push(<div className={"blog-entry"}>

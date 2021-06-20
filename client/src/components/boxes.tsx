@@ -1,11 +1,11 @@
 import { HashLink as Link } from "react-router-hash-link";
 import React from "react";
-const path = require("path");
+import * as path from "path";
 
 export function Boxes(props) {
-	let content = [];
+	const content = [];
 	let justify;
-	for (let key in props.boxes) {
+	for (const key in props.boxes) {
 		if (Object.prototype.hasOwnProperty.call(props.boxes, key)) {
 			if (key % 2 === 0) { justify = "left"; } else if (key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!");}
 			if ((key - 1) % 4 === 1 || (key - 1) % 4 === 2) {
