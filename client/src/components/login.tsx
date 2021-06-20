@@ -5,19 +5,21 @@ import {HashLink as Link} from "react-router-hash-link";
 import {useHistory} from "react-router-dom";
 
 export default function Login() {
-	const emailRef = useRef();
-	const passwordRef = useRef();
-	const {login} = useAuth();
+	const emailRef = useRef<HTMLInputElement | null>(null);
+	const passwordRef = useRef<HTMLInputElement | null>(null);
+	const {login}: any = useAuth();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const history = useHistory();
 
-	async function handleSubmit(e) {
+	async function handleSubmit(e: any) {
 		e.preventDefault();
 
 		try {
 			setError("");
 			setLoading(true);
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
 			await login(emailRef.current.value, passwordRef.current.value);
 			history.push("/");
 		} catch {

@@ -1,9 +1,10 @@
 import { HashLink as Link } from "react-router-hash-link";
-import React from "react";
+import * as React from "react";
 import nl2br from "react-nl2br";
+import * as PropTypes from "prop-types";
 
-export function Welcome(props) {
-	let button = <Link to={props.buttonLocation} className={`button introduction-button center ${props.buttonClassName}`}>
+export const Welcome: React.FC = (props: any) => {
+	const button = <Link to={props.buttonLocation} className={`button introduction-button center ${props.buttonClassName}`}>
 		{props.buttonContent}
 	</Link>;
 	return (
@@ -21,4 +22,14 @@ export function Welcome(props) {
 			</div>
 		</>
 	);
-}
+};
+
+Welcome.propTypes = {
+	buttonLocation: PropTypes.string,
+	buttonClassName: PropTypes.string,
+	buttonContent: PropTypes.string,
+	cssClass: PropTypes.string,
+	heading: PropTypes.string,
+	content: PropTypes.string,
+	children: PropTypes.any
+};

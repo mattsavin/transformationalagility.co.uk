@@ -1,7 +1,9 @@
-import React, {Component} from "react";
+import * as React from "react";
+import { FunctionComponent, Component} from "react";
 
-export default class BlogArticles extends Component {
-	constructor(props) {
+
+export default class BlogArticles extends Component<any, any> {
+	constructor(props: any) {
 		super(props);
 		this.state = {
 			blog: []
@@ -16,9 +18,9 @@ export default class BlogArticles extends Component {
 	}
 
 	render() {
-		const content = [];
+		const content: JSX.Element[] = [];
 
-		this.state.blog.forEach((element) => {
+		this.state.blog.forEach((element: any) => {
 			content.push(<div className={"blog-entry"}>
 				<h1>{element.Title}</h1>
 				<img src={element.image} alt={"Blog Post"}/>

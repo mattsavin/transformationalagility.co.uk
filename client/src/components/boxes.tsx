@@ -1,14 +1,15 @@
 import { HashLink as Link } from "react-router-hash-link";
-import React from "react";
+import * as React from "react";
 import * as path from "path";
+import * as PropTypes from "prop-types";
 
-export function Boxes(props) {
+export function Boxes(props: any) {
 	const content = [];
 	let justify;
 	for (const key in props.boxes) {
 		if (Object.prototype.hasOwnProperty.call(props.boxes, key)) {
-			if (key % 2 === 0) { justify = "left"; } else if (key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!");}
-			if ((key - 1) % 4 === 1 || (key - 1) % 4 === 2) {
+			if (+key % 2 === 0) { justify = "left"; } else if (+key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!");}
+			if ((+key - 1) % 4 === 1 || (+key - 1) % 4 === 2) {
 				content.push(
 					<div className={`box box-${key} ${justify}`}>
 						<div className={"box-width"}>
@@ -41,3 +42,7 @@ export function Boxes(props) {
 		</>
 	);
 }
+
+Boxes.propTypes = {
+	boxes: PropTypes.object,
+};

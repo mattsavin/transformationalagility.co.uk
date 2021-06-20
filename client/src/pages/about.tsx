@@ -3,7 +3,7 @@ import {Welcome} from "../components/welcome";
 import * as content from "../content/about.json";
 import { Footer } from "../components/footer";
 
-function about() {
+export const about:React.FunctionComponent = () => {
 	return (
 		<>
 			<Welcome heading={content.intro.heading}
@@ -17,6 +17,4 @@ function about() {
 		</>
 
 	);
-}
-
-export default about;
+};

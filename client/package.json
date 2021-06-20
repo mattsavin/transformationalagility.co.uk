@@ -9,8 +9,6 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.8",
     "bootstrap": "^4.6.0",
     "firebase": "^8.6.7",
     "firebaseui": "^4.8.0",
@@ -53,6 +51,10 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-router-hash-link": "^2.4.0",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.28.0",

@@ -4,19 +4,21 @@ import { useAuth } from "../contexts/AuthContext";
 import {HashLink as Link} from "react-router-hash-link";
 
 export default function ForgotPassword() {
-	const emailRef = useRef();
-	const { resetPassword } = useAuth();
+	const emailRef = useRef<HTMLInputElement | null>(null);
+	const { resetPassword }: any = useAuth();
 	const [error, setError] = useState("");
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	async function handleSubmit(e) {
+	async function handleSubmit(e: any) {
 		e.preventDefault();
 
 		try {
 			setMessage("");
 			setError("");
 			setLoading(true);
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
 			await resetPassword(emailRef.current.value);
 			setMessage("Check your inbox for further instructions");
 		} catch {
@@ -25,7 +27,7 @@ export default function ForgotPassword() {
 
 		setLoading(false);
 	}
-
+	
 	return(
 		<>
 			<div className={"login-body parallax"}>
