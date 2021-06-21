@@ -2,19 +2,19 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { HashLink as Link } from "react-router-hash-link";
-//import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 export default function UpdateProfile() {
-	const emailRef = useRef();
-	const passwordRef = useRef();
-	const confirmPasswordRef = useRef();
-	const { currentUser, updateEmail, updatePassword } = useAuth();
+	const emailRef = useRef<any>();
+	const passwordRef = useRef<any>();
+	const confirmPasswordRef = useRef<any>();
+	const { currentUser, updateEmail, updatePassword }: any = useAuth();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
-	//const history = useHistory();
+	const history = useHistory();
 
-	function handleSubmit(e) {
+	function handleSubmit(e: any) {
 		e.preventDefault();
 
 		if (passwordRef.current.value !== confirmPasswordRef.current.value) {
@@ -34,7 +34,7 @@ export default function UpdateProfile() {
 		}
 
 		Promise.all(promises).then(() => {
-			//history.push("/")
+			history.push("/");
 		}).catch(() => {
 			setError("failed to update account");
 		}).finally(() => {

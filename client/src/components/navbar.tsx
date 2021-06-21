@@ -15,8 +15,8 @@ function Navbar() {
 	const showSidebar = () => {
 		rotation += 180;
 		setSidebar(!sidebar);
-		document.querySelector("#navArrows").style.transform = `rotate(${rotation}deg)`;
-		document.querySelector("#navArrows").style.transition = "transform 500ms ease-in-out";
+		document.querySelector<HTMLElement>("#navArrows")!.style.transform = `rotate(${rotation}deg)`;
+		document.querySelector<HTMLElement>("#navArrows")!.style.transition = "transform 500ms ease-in-out";
 	};
 
 

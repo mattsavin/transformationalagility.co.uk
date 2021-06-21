@@ -6,15 +6,15 @@ import { useHistory } from "react-router-dom";
 
 
 export default function Signup() {
-	const emailRef = useRef();
-	const passwordRef = useRef();
-	const confirmPasswordRef = useRef();
-	const { signup } = useAuth();
+	const emailRef = useRef<any>();
+	const passwordRef = useRef<any>();
+	const confirmPasswordRef = useRef<any>();
+	const { signup }: any = useAuth();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const history = useHistory();
 
-	async function handleSubmit(e) {
+	async function handleSubmit(e: any) {
 		e.preventDefault();
 
 		if (passwordRef.current.value !== confirmPasswordRef.current.value) {

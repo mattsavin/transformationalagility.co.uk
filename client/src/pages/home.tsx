@@ -1,5 +1,5 @@
 import React from "react";
-import * as content from "../content/home";
+import * as content from "../content/home.json";
 import { Boxes }  from "../components/boxes";
 import {BannerBreak} from "../components/banner-break";
 import { Welcome } from "../components/welcome";

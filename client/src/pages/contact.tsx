@@ -1,11 +1,18 @@
 import React from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import { Welcome } from "../components/welcome";
-import * as content from "../content/contact";
+import * as content from "../content/contact.json";
 import { ContactInfo } from "../components/contact-info";
 import { Footer } from "../components/footer";
 
 smoothscroll.polyfill();
+
+declare global {
+	interface Window {
+		__forceSmoothScrollPolyfill__: boolean
+	}
+}
+
 window.__forceSmoothScrollPolyfill__ = true;
 
 function contact() {

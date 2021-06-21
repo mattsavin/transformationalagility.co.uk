@@ -1,9 +1,8 @@
 import { HashLink as Link } from "react-router-hash-link";
 import * as React from "react";
 import nl2br from "react-nl2br";
-import * as PropTypes from "prop-types";
 
-export const Welcome: React.FC = (props: any) => {
+export const Welcome: React.FC<Props> = (props: any) => {
 	const button = <Link to={props.buttonLocation} className={`button introduction-button center ${props.buttonClassName}`}>
 		{props.buttonContent}
 	</Link>;
@@ -24,12 +23,12 @@ export const Welcome: React.FC = (props: any) => {
 	);
 };
 
-Welcome.propTypes = {
-	buttonLocation: PropTypes.string,
-	buttonClassName: PropTypes.string,
-	buttonContent: PropTypes.string,
-	cssClass: PropTypes.string,
-	heading: PropTypes.string,
-	content: PropTypes.string,
-	children: PropTypes.any
-};
+interface Props {
+	buttonLocation: string,
+	content: string,
+	buttonClassName?: string,
+	buttonContent: any,
+	cssClass: string,
+	heading: string,
+
+}

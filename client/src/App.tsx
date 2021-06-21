@@ -1,8 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import Navbar from "./components/navbar";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import home from "./pages/home";
-import about from "./pages/about";
+import { about } from "./pages/about";
 import contact from "./pages/contact";
 import blog from "./pages/blog";
 import caseStudies from "./pages/caseStudies";
@@ -14,9 +14,8 @@ import PrivateRoute from "./components/privateRoute";
 import forgotPassword from "./pages/forgotPassword";
 import updateProfile from "./pages/updateProfile";
 
-//TODO: Add PropTypes validation
 
-class App extends Component {
+class App extends React.Component {
 	render() {
 		return (
 			<Router>
@@ -31,8 +30,8 @@ class App extends Component {
 						<Route path="/login" exact component={login} />
 						<Route path="/signup" exact component={signup} />
 						<Route path={"/forgot-password"} exact component={forgotPassword} />
-						<PrivateRoute path={"/update-profile"} exact component={updateProfile} />
-						<PrivateRoute path={"/dashboard"} exact component={dashboard} />
+						<PrivateRoute path={"/update-profile"} component={updateProfile} />
+						<PrivateRoute path={"/dashboard"} component={dashboard} />
 					</Switch>
 				</AuthProvider>
 			</Router>

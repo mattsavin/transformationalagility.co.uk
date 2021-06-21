@@ -1,17 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
 import {auth} from "../components/firebase";
-import firebase from "firebase/app";
 import "firebase/auth";
-import * as PropTypes from "prop-types";
 
-const AuthContext = React.createContext(undefined);
+const AuthContext: any = React.createContext(undefined);
 
 export function useAuth() {
 	return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
-	const [currentUser, setCurrentUser] = useState();
+export function AuthProvider({ children }:any) {
+	const [currentUser, setCurrentUser]: any = useState();
 	const [loading, setLoading] = useState(true);
 
 	function signup(email: string, password: string) {
@@ -30,12 +28,12 @@ export function AuthProvider({ children }) {
 		return auth.sendPasswordResetEmail(email);
 	}
 
-	function updateEmail(email: any) {
-		return currentUser.updateEmail(email);
+	function updateEmail(email: string) {
+		return currentUser?.updateEmail(email);
 	}
 
-	function updatePassword(password: any) {
-		return currentUser.updatePassword(password);
+	function updatePassword(password: string) {
+		return currentUser?.updatePassword(password);
 	}
 
 	useEffect(() => {
@@ -62,7 +60,3 @@ export function AuthProvider({ children }) {
 		</AuthContext.Provider>
 	);
 }
-
-AuthProvider.propTypes = {
-	children: PropTypes.any
-};

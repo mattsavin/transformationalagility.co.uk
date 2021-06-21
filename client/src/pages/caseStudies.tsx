@@ -4,7 +4,13 @@ import {Welcome} from "../components/welcome";
 function caseStudies() {
 	return (
 		<>
-			<Welcome />
+			<Welcome buttonLocation = {""}
+				buttonContent = {""}
+				buttonClassName = {""}
+				content = {""}
+				cssClass = {""}
+				heading = {""}
+			/>
 			<h1>Loreum Ipsum Dolor sit amet, consectur adipiscing elit.</h1>
 		</>
 	);
