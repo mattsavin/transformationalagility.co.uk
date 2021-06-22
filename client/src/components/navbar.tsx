@@ -9,7 +9,7 @@ import logo_small from "../images/logo_small.png";
 
 let rotation = 0;
 
-function Navbar() {
+function Navbar(): JSX.Element {
 	const [sidebar, setSidebar] = useState(false);
 
 	const showSidebar = () => {

@@ -1,9 +1,9 @@
 import React from "react";
 import {Welcome} from "../components/welcome";
-import {Footer} from "../components/footer";
+import Footer from "../components/footer";
 import BlogArticles from "../components/blogArticles";
 
-function blog() {
+function blog(): JSX.Element {
 	return (
 		<>
 			<Welcome

@@ -1,7 +1,7 @@
 import React from "react";
 import {Welcome} from "../components/welcome";
 import * as content from "../content/about.json";
-import { Footer } from "../components/footer";
+import Footer from "../components/footer";
 
 export const about:React.FunctionComponent = () => {
 	return (

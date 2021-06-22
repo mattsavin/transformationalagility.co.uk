@@ -1,0 +1,52 @@
+{
+  "boxes": {
+    "1": {
+      "justify": "left",
+      "backgroundImage": "../images/solar-panels.jpg"
+    },
+    "2": {
+      "justify": "right",
+      "heading": "Enabling Transformational Change",
+      "subheading": "Achieve Your Goals",
+      "content": "With over 20 years of experience, our staff has the capabilities and expertise to take your business to the next level. At Transformational Business Agility, we combine our insights and skills to transform your processes and strategies, and in turn, your company. We’re proud to help shape and improve how our clients structure and manage their business.",
+      "buttonLocation": "/contact",
+      "buttonContent": "Contact Us"
+    },
+    "3": {
+      "justify": "left",
+      "heading": "Succeeding Through Agility",
+      "subheading": "Expert Guidance",
+      "content": "Looking to develop your business but not sure where to turn? Need help planning or executing your next project? Let us guide you. Any organization can move forward with small incremental changes, but building for the future in today’s rapidly evolving environment means taking bold chances and making insightful decisions.",
+      "buttonLocation": "/contact",
+      "buttonContent": "Contact Us"
+    },
+    "4": {
+      "justify": "right",
+      "backgroundImage": "../images/mountain.jpg"
+    },
+    "5": {
+      "justify": "left",
+      "backgroundImage": "../images/forest.jpg"
+    },
+    "6": {
+      "justify": "right",
+      "heading": "The Only Constant is Change",
+      "subheading": "Grow Your Business",
+      "content": "We examine what organisations are doing to stay relevant and competitive in this fast-paced world, and which ones are doing it best. We then strategise using smart tools and global resources in order to understand the implications of every choice our clients can make. Get in touch to learn more about how this service can help you.",
+      "buttonLocation": "/contact",
+      "buttonContent": "Contact Us"
+    },
+    "7": {
+      "justify": "left",
+      "heading": "Going Higher",
+      "subheading": "Achieve Your Goals",
+      "content": "With years of experience, our staff has the capabilities and expertise to take your business to the next level. At Transformational Business Agility, we are here to help you realise your potential, improve leadership, enable high performing teams and for you to match and exceed the winds of the external environment. We’re proud to help shape and improve how our clients structure and manage their business.",
+      "buttonLocation": "/contact",
+      "buttonContent": "Contact Us"
+    },
+    "8": {
+      "justify": "right",
+      "backgroundImage": "./images/hot-air-balloon-fire.jpg"
+    }
+  }
+}

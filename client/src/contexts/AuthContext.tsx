@@ -1,14 +1,14 @@
 import React, {useContext, useEffect, useState} from "react";
-import {auth} from "../components/firebase";
+import /*firebase,*/ {auth} from "../components/firebase";
 import "firebase/auth";
 
 const AuthContext: any = React.createContext(undefined);
 
-export function useAuth() {
+export function useAuth():React.Context<unknown> {
 	return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }:any) {
+export function AuthProvider({ children }: any): JSX.Element {
 	const [currentUser, setCurrentUser]: any = useState();
 	const [loading, setLoading] = useState(true);
 

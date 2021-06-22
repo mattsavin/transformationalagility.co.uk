@@ -6,7 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
 
 
-export default function Dashboard () {
+export default function Dashboard (): JSX.Element {
 	const [error, setError] = useState("");
 	const { currentUser, logout }: any = useAuth();
 	const history = useHistory();

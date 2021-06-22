@@ -8,7 +8,6 @@ interface Props {
 	title: string,
 	buttonLocation: string,
 	buttonContent: string
-
 }
 
 

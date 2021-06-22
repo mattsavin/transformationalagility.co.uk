@@ -3,9 +3,9 @@ import * as content from "../content/home.json";
 import { Boxes }  from "../components/boxes";
 import {BannerBreak} from "../components/banner-break";
 import { Welcome } from "../components/welcome";
-import { Footer } from "../components/footer";
+import Footer from "../components/footer";
 
-function home() {
+export default function home(): JSX.Element {
 	return (
 		<div className="home">
 
@@ -31,5 +31,3 @@ function home() {
 		</div>
 	);
 }
-
-export default home;

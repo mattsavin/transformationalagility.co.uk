@@ -1,8 +1,8 @@
 import React from "react";
 import Signup from "../components/signup";
-import {Footer} from "../components/footer";
+import Footer from "../components/footer";
 
-export default function signup() {
+export default function signup(): JSX.Element {
 	return (
 		<>
 			<Signup />

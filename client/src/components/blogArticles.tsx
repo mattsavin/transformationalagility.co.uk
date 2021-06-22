@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FunctionComponent, Component} from "react";
+import { Component} from "react";
 
 
 export default class BlogArticles extends Component<any, any> {
@@ -17,7 +17,7 @@ export default class BlogArticles extends Component<any, any> {
 			));
 	}
 
-	render() {
+	render(): JSX.Element {
 		const content: JSX.Element[] = [];
 
 		this.state.blog.forEach((element: any) => {

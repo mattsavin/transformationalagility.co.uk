@@ -3,7 +3,7 @@ import * as React from "react";
 import * as path from "path";
 import * as PropTypes from "prop-types";
 
-export function Boxes(props: any) {
+export function Boxes(props: any): JSX.Element {
 	const content = [];
 	let justify;
 	for (const key in props.boxes) {
@@ -11,7 +11,7 @@ export function Boxes(props: any) {
 			if (+key % 2 === 0) { justify = "left"; } else if (+key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!");}
 			if ((+key - 1) % 4 === 1 || (+key - 1) % 4 === 2) {
 				content.push(
-					<div className={`box box-${key} ${justify}`}>
+					<div key={key} className={`box box-${key} ${justify}`}>
 						<div className={"box-width"}>
 							<h3 className={"box box-title"}>
 								{props.boxes[key].heading}

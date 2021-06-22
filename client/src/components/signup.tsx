@@ -5,7 +5,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
 
 
-export default function Signup() {
+export default function Signup(): JSX.Element {
 	const emailRef = useRef<any>();
 	const passwordRef = useRef<any>();
 	const confirmPasswordRef = useRef<any>();

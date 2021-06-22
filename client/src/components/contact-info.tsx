@@ -1,7 +1,7 @@
 import React from "react";
 import * as RIIcons from "react-icons/ri";
 
-export function ContactInfo () {
+export function ContactInfo (): JSX.Element {
 	return (
 		<>
 			<div className={"contact-holder"} id={"contact-info"}>

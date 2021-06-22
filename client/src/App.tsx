@@ -16,7 +16,7 @@ import updateProfile from "./pages/updateProfile";
 
 
 class App extends React.Component {
-	render() {
+	render(): JSX.Element {
 		return (
 			<Router>
 				<AuthProvider>

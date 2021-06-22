@@ -2,7 +2,7 @@ import React from "react";
 import {HashLink as Link} from "react-router-hash-link";
 import * as FAIcons from "react-icons/fa";
 
-export function Footer () {
+export default function Footer (): JSX.Element {
 	return (
 		<>
 			<div className="socials">

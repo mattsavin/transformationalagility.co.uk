@@ -3,7 +3,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import {HashLink as Link} from "react-router-hash-link";
 
-export default function ForgotPassword() {
+export default function ForgotPassword(): JSX.Element {
 	const emailRef = useRef<HTMLInputElement | null>(null);
 	const { resetPassword }: any = useAuth();
 	const [error, setError] = useState("");

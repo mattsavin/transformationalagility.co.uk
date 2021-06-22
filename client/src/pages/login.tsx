@@ -1,8 +1,8 @@
 import React from "react";
 import Login from "../components/login";
-import {Footer} from "../components/footer";
+import Footer from "../components/footer";
 
-export default function login() {
+export default function login(): JSX.Element {
 	return (
 		<>
 			<Login />

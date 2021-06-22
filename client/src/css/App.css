@@ -109,6 +109,7 @@ html {
     font-size: 1.5rem;
     background: none;
     border: solid #ff6b26 2px;
+    align-items: center;
 }
 .button:hover {
     background-color: #ff6b26;
