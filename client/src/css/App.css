@@ -146,31 +146,31 @@ html {
     padding: 0;
 }
 
-.box-1, .box-4, .box-5, .box-8 {
+.box-0, .box-3, .box-4, .box-7 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25% 50%;
 }
 
-.box-2, .box-3, .box-6, .box-7 {
+.box-1, .box-2, .box-5, .box-6 {
     background-color: #222831;
     color: whitesmoke;
     justify-content: center;
 }
 
-.index-box-image-1 {
+.index-box-image-0 {
     background-image: url("../images/solar-panels.jpg");
 }
 
-.index-box-image-4 {
+.index-box-image-3 {
     background-image: url("../images/mountain.jpg")
 }
 
-.index-box-image-5 {
+.index-box-image-4 {
     background-image: url("../images/forest.jpg")
 }
 
-.index-box-image-8 {
+.index-box-image-7 {
     background-image: url("../images/hot-air-balloon-fire.jpg")
 }
 

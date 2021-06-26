@@ -8,8 +8,8 @@ export function Boxes(props: any): JSX.Element {
 	let justify;
 	for (const key in props.boxes) {
 		if (Object.prototype.hasOwnProperty.call(props.boxes, key)) {
-			if (+key % 2 === 0) { justify = "left"; } else if (+key % 2 === 1 ) { justify = "right"; } else {console.log("ERROR!");}
-			if ((+key - 1) % 4 === 1 || (+key - 1) % 4 === 2) {
+			if (+key % 2 === 1) { justify = "left"; } else if (+key % 2 === 0) { justify = "right"; } else {console.log("ERROR!");}
+			if ((+key ) % 4 === 1 || (+key) % 4 === 2) {
 				content.push(
 					<div key={key} className={`box box-${key} ${justify}`}>
 						<div className={"box-width"}>

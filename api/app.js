@@ -8,10 +8,10 @@ admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount)
 });
 
-const blogPosts = require("./routes/api/blog");
-app.use("/api/blog", blogPosts);
-const content = require("./routes/api/content/home");
-app.use("/api/content/home", content);
+app.use("/api/blog", require("./routes/api/blog"));
+app.use("/api/content/home/boxes", require("./routes/api/content/home/boxes"));
+app.use("/api/content/home/intro", require("./routes/api/content/home/intro"));
+app.use("/api/content/home/break", require("./routes/api/content/home/break"));
 
 app.use(express.static(path.join(__dirname, "build")));
 

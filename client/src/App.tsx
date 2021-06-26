@@ -20,18 +20,18 @@ class App extends React.Component {
 		return (
 			<Router>
 				<AuthProvider>
-					<Navbar />
+					<Navbar/>
 					<Switch>
-						<Route path="/" exact component={home} />
-						<Route path="/about" exact component={about} />
-						<Route path="/caseStudies" exact component={caseStudies} />
-						<Route path="/blog" exact component={blog} />
-						<Route path="/contact" exact component={contact} />
-						<Route path="/login" exact component={login} />
-						<Route path="/signup" exact component={signup} />
-						<Route path={"/forgot-password"} exact component={forgotPassword} />
-						<PrivateRoute path={"/update-profile"} component={updateProfile} />
-						<PrivateRoute path={"/dashboard"} component={dashboard} />
+						<Route path="/" exact component={home}/>
+						<Route path="/about" exact component={about}/>
+						<Route path="/caseStudies" exact component={caseStudies}/>
+						<Route path="/blog" exact component={blog}/>
+						<Route path="/contact" exact component={contact}/>
+						<Route path="/login" exact component={login}/>
+						<Route path="/signup" exact component={signup}/>
+						<Route path={"/forgot-password"} exact component={forgotPassword}/>
+						<PrivateRoute path={"/update-profile"} component={updateProfile}/>
+						<PrivateRoute path={"/dashboard"} component={dashboard}/>
 					</Switch>
 				</AuthProvider>
 			</Router>
