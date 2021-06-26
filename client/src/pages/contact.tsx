@@ -1,35 +1,39 @@
 import React from "react";
-import smoothscroll from "smoothscroll-polyfill";
 import { Welcome } from "../components/welcome";
-import * as content from "../content/contact.json";
 import { ContactInfo } from "../components/contact-info";
 import Footer from "../components/footer";
 
-smoothscroll.polyfill();
+export default class contact extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+		this.state = {
+			intro: []
+		};
+	}
 
-declare global {
-	interface Window {
-		__forceSmoothScrollPolyfill__: boolean
+	componentDidMount() {
+		fetch("/api/content/contact/intro")
+			.then(res => res.json())
+			.then(intro => this.setState({intro}
+			));
+	}
+
+	render(): JSX.Element {
+		const intro = Object.assign({}, this.state.intro[0]);
+
+		console.log(this.state.intro);
+
+		return (
+			<div className="home">
+				<Welcome heading={intro.heading}
+					content={intro.content}
+					buttonContent={intro.buttonContent}
+					buttonLocation={intro.buttonLocation}
+					cssClass={"home"}
+				/>
+				<ContactInfo />
+				<Footer/>
+			</div>
+		);
 	}
 }
-
-window.__forceSmoothScrollPolyfill__ = true;
-
-function contact(): JSX.Element {
-	return (
-		<div className="contact">
-			<Welcome heading={content.heading}
-				content={content.content}
-				cssClass={"contact"}
-				buttonContent={<img alt="Arrow Down Icon" src={content.imageURL} />}
-				buttonClassName={"ct-btn-scroll"}
-				buttonLocation={content.buttonLocation}/>
-
-			<ContactInfo />
-
-			<Footer />
-		</div>
-	);
-}
-
-export default contact;

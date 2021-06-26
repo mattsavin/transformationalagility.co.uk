@@ -22,6 +22,8 @@ app.use("/api/content/home/intro", require("./routes/api/content/home/intro"));
 app.use("/api/content/home/break", require("./routes/api/content/home/break"));
 // eslint-disable-next-line no-undef
 app.use("/api/content/about/intro", require("./routes/api/content/about/intro"));
+// eslint-disable-next-line no-undef
+app.use("/api/content/contact/intro", require("./routes/api/content/contact/intro"));
 
 // eslint-disable-next-line no-undef
 app.use(express.static(path.join(__dirname, "build")));

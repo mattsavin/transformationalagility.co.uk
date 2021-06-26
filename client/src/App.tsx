@@ -13,6 +13,14 @@ import dashboard from "./pages/dashboard";
 import PrivateRoute from "./components/privateRoute";
 import forgotPassword from "./pages/forgotPassword";
 import updateProfile from "./pages/updateProfile";
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
+declare global {
+	interface Window {
+		__forceSmoothScrollPolyfill__: boolean
+	}
+}
+window.__forceSmoothScrollPolyfill__ = true;
 
 
 class App extends React.Component {
