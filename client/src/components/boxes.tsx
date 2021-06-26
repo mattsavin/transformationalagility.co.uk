@@ -36,11 +36,7 @@ export function Boxes(props: any): JSX.Element {
 		}
 	}
 
-	return (
-		<>
-			{content}
-		</>
-	);
+	return <> {content} </>;
 }
 
 Boxes.propTypes = {

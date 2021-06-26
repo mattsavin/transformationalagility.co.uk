@@ -13,14 +13,13 @@ export default class CaseStudies extends Component<any, any> {
 	}
 
 	componentDidMount() {
-		fetch("/api/content")
+		fetch("/api/content/home")
 			.then(res => res.json())
 			.then(db => this.setState({db}
 			));
 	}
 
 	render(): JSX.Element {
-		console.log(this.state.db);
 		const content: any = [];
 
 		this.state.db.forEach((element: any) => {
@@ -29,7 +28,7 @@ export default class CaseStudies extends Component<any, any> {
 			);
 		});
 
-		console.log(content);
+		console.log(content[0]);
 
 		return (
 			<>
@@ -43,6 +42,9 @@ export default class CaseStudies extends Component<any, any> {
 					cssClass = {"home"}
 					heading = {"Case Studies"}
 				/>
+
+				<Boxes boxes={content[0]} />
+
 				<Footer />
 			</>
 		);

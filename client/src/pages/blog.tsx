@@ -3,7 +3,7 @@ import {Welcome} from "../components/welcome";
 import Footer from "../components/footer";
 import BlogArticles from "../components/blogArticles";
 
-function blog(): JSX.Element {
+export default function blog(): JSX.Element {
 	return (
 		<>
 			<Welcome
@@ -17,5 +17,3 @@ function blog(): JSX.Element {
 		</>
 	);
 }
-
-export default blog;

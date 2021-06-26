@@ -5,7 +5,7 @@ const admin = require("firebase-admin");
 const db = admin.firestore();
 
 
-db.collection("content")
+db.collection("content/home/boxes")
 	.get()
 	.then(querySnapshot => {
 		const documents = querySnapshot.docs.map(doc => doc.data());

@@ -10,8 +10,8 @@ admin.initializeApp({
 
 const blogPosts = require("./routes/api/blog");
 app.use("/api/blog", blogPosts);
-const content = require("./routes/api/content");
-app.use("/api/content", content);
+const content = require("./routes/api/content/home");
+app.use("/api/content/home", content);
 
 app.use(express.static(path.join(__dirname, "build")));
 

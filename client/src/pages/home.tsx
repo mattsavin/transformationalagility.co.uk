@@ -1,33 +1,53 @@
 import React from "react";
 import * as content from "../content/home.json";
 import { Boxes }  from "../components/boxes";
-import {BannerBreak} from "../components/banner-break";
+import { BannerBreak } from "../components/banner-break";
 import { Welcome } from "../components/welcome";
 import Footer from "../components/footer";
 
-export default function home(): JSX.Element {
-	return (
-		<div className="home">
+export default class Home extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+		this.state = {
+			blog: {}
+		};
+	}
 
-			<Welcome heading={content.intro.heading}
-				content={content.intro.content}
-				buttonContent={content.intro.buttonContent}
-				buttonLocation={content.intro.buttonLocation}
-				cssClass ={"home"}
-			/>
+	componentDidMount() {
+		fetch("/api/content/home")
+			.then(res => res.json())
+			.then(blog => this.setState({blog})
+			);
+	}
 
-			<BannerBreak title={content.break.title}
-				content={content.break.content}
-				buttonLocation={content.break.buttonLocation}
-				buttonContent={content.break.buttonContent}
+	render(): JSX.Element {
 
-			/>
-			<div className={"boxes"}>
-				<Boxes boxes={content.boxes}
+		console.log(this.state.blog);
+
+		return (
+			<div className="home">
+
+				<Welcome heading={content.intro.heading}
+					content={content.intro.content}
+					buttonContent={content.intro.buttonContent}
+					buttonLocation={content.intro.buttonLocation}
+					cssClass={"home"}
 				/>
-			</div>
 
-			<Footer />
-		</div>
-	);
+				<BannerBreak title={content.break.title}
+					content={content.break.content}
+					buttonLocation={content.break.buttonLocation}
+					buttonContent={content.break.buttonContent}
+
+				/>
+				<div className={"boxes"}>
+					<Boxes boxes={content.boxes}
+					/>
+					<Boxes boxes={this.state.blog} />
+				</div>
+
+				<Footer/>
+			</div>
+		);
+	}
 }
