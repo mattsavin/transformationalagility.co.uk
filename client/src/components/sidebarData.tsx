@@ -14,21 +14,9 @@ export const SidebarData = [
 		cName: "nav-text"
 	},
 	{
-		title: "Dashboard",
-		path: "/dashboard",
-		icon: <RIIcons.RiDashboardFill />,
-		cName: "nav-text"
-	},
-	{
 		title: "About",
 		path: "/about",
 		icon: <IOIcons.IoMdPeople />,
-		cName: "nav-text"
-	},
-	{
-		title: "Case Studies",
-		path: "/caseStudies",
-		icon: <AIIcons.AiFillFolder />,
 		cName: "nav-text"
 	},
 	{
@@ -37,6 +25,13 @@ export const SidebarData = [
 		icon: <BSIcons.BsFileText />,
 		cName: "nav-text"
 	},
+	{
+		title: "Case Studies",
+		path: "/caseStudies",
+		icon: <AIIcons.AiFillFolder />,
+		cName: "nav-text"
+	},
+	
 	{
 		title: "Contact",
 		path: "/contact",
@@ -49,6 +44,4 @@ export const SidebarData = [
 		icon: <FIIcons.FiLogIn />,
 		cName: "nav-text"
 	},
-
 ];
-

@@ -90,9 +90,6 @@ html {
     font-size: 1.5rem;
 }
 
-.box-paragraph {
-}
-
 .box-width {
     max-width: 600px;
 }
@@ -133,9 +130,6 @@ html {
 
 .break-content {
     font-size: 1.25rem;
-}
-
-.boxes {
 }
 
 .left,
@@ -464,6 +458,36 @@ span {
     padding: 2rem;
     background-color: #222831;
     color: whitesmoke;
+}
+
+.blog-link {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #222831;
+    color: whitesmoke;
+}
+
+.blog-link a {
+	text-decoration: none;
+	color: #ff6b26;
+	font-size: 2rem;
+}
+
+.blog-title {
+	padding: 4rem 1rem 1rem 1rem;
+}
+
+.blog-paragraph {
+	padding: 2rem;
+}
+
+.blog-image img {
+	padding: 2rem;
+	max-height: 200px;
 }
 
 @media only screen and (max-width: 1200px){

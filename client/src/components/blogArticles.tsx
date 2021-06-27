@@ -1,36 +1,34 @@
-import * as React from "react";
-import { Component} from "react";
+import React, {useEffect, useState} from "react";
+import { Redirect } from "react-router";
 
+// eslint-disable-next-line react/display-name,react/prop-types,@typescript-eslint/ban-ts-comment
+export default function BlogArticles({match: {params: {id}}}: any): JSX.Element {
+	const [articles, setArticles] = useState<any>({});
 
-export default class BlogArticles extends Component<any, any> {
-	constructor(props: any) {
-		super(props);
-		this.state = {
-			blog: []
-		};
-	}
-
-	componentDidMount() {
+	useEffect((): any => {
 		fetch("/api/blog")
 			.then(res => res.json())
-			.then(blog => this.setState({blog}
-			));
+			.then(blog => setArticles({blog}));
+		return "";
+	}, []);
+	
+	id = parseInt(id);
+	if (id != 0 && !id) {
+		return <Redirect to={{pathname: "/404"}} />;
 	}
 
-	render(): JSX.Element {
-		const content: JSX.Element[] = [];
-
-		this.state.blog.forEach((element: any) => {
-			content.push(<div className={"blog-entry"}>
-				<h1>{element.Title}</h1>
-				<img src={element.image} alt={"Blog Post"}/>
-			</div>);
-		});
-
-		return (
-			<div id={"articles"}>
-				{content}
+	if (articles.blog) {
+		const blog = Object.assign({}, articles.blog[id - 1]);
+		const title = blog.Title;
+		return(
+			<div className={"blog-entry"}>
+				<h1 className={"blog-title"}>{blog.Title}</h1>
+				<img className={"blog-image"} src={blog.image} alt={"Blog Post"}/>
+				<p className={"blog-paragaph"}>{blog.Content}</p>
 			</div>
 		);
+	}
+	else {
+		return (<></>);
 	}
 }

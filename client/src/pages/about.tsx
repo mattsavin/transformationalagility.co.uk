@@ -20,8 +20,6 @@ export default class about extends React.Component<any, any> {
 	render(): JSX.Element {
 		const intro = Object.assign({}, this.state.intro[0]);
 
-		console.log(this.state.intro);
-
 		return (
 			<div className="home">
 

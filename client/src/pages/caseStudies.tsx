@@ -28,8 +28,6 @@ export default class CaseStudies extends Component<any, any> {
 			);
 		});
 
-		console.log(content[0]);
-
 		return (
 			<>
 				<Welcome buttonLocation = {"/contact"}

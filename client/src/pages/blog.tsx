@@ -1,7 +1,7 @@
 import React from "react";
 import {Welcome} from "../components/welcome";
 import Footer from "../components/footer";
-import BlogArticles from "../components/blogArticles";
+import BlogArticles from "../components/blogLinks";
 
 export default function blog(): JSX.Element {
 	return (
