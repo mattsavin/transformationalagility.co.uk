@@ -3,7 +3,7 @@ import { Component} from "react";
 import { Link } from "react-router-dom";
 
 
-export default class BlogLinks extends Component<any, any> {
+export default class BlogArticles extends Component<any, any> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
@@ -23,9 +23,13 @@ export default class BlogLinks extends Component<any, any> {
 			content.push(<div className={"blog-link"}><Link to={`/blog/${element.id}`}>{`${element.Title}`}</Link> <br /></div>);
 		});
 		return (
-			<div id={"articles"}>
-				{content}
-			</div>
+			<>
+				<>
+					<h2  id={"articles"}className={"blog-link-title"}>Articles</h2>
+					{content}
+					
+				</>
+			</>
 		);
 	}
 }

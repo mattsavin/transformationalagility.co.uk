@@ -41,7 +41,8 @@ export default class App extends React.Component {
 						<Route path="/contact" exact component={contact}/>
 						<Route path="/login" exact component={login}/>
 						<Route path="/signup" exact component={signup}/>
-						<Route path="/404" exact component={NotFound}/>
+						<Route path="/404" component={NotFound}/>
+						<Route component={NotFound} />
 						<Route path={"/forgot-password"} exact component={forgotPassword}/>
 						<PrivateRoute path={"/update-profile"} component={updateProfile}/>
 						<PrivateRoute path={"/dashboard"} component={dashboard}/>
