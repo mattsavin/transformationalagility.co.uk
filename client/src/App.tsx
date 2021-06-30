@@ -26,6 +26,11 @@ declare global {
 window.__forceSmoothScrollPolyfill__ = true;
 
 
+/* COLOUR PALETTE
+ * https://coolors.co/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 
+ * BLACK --> ORANGE
+ */
+
 export default class App extends React.Component {
 	render(): JSX.Element {
 		return (
