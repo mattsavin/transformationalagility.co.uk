@@ -36,3 +36,5 @@ node_modules
 /api/package-lock.json
 /api/yarn.lock
 package-lock.json
+
+/client/build

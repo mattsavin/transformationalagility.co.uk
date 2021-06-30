@@ -65,7 +65,7 @@ export default function UpdateProfile(): JSX.Element {
 					<Button disabled={loading} type={"submit"} className={"form-button button"}>Update</Button>
 				</Form>
 				<div className={"w-100 text-center mt-2"}>
-					<p>Already have an account? <Link to={"/dashboard"}>Cancel</Link></p>
+					<p><Link to={"/dashboard"}>Cancel</Link></p>
 				</div>
 			</div>
 		</>
