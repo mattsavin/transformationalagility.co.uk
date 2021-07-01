@@ -15,15 +15,15 @@ export default class Home extends React.Component<any, any> {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9000/api/content/home/boxes")
+		fetch("http://delivery-agility.com/api/content/home/boxes")
 			.then(res => res.json())
 			.then(boxes => this.setState({boxes}
 			));
-		fetch("http://localhost:9000/api/content/home/intro")
+		fetch("http://delivery-agility.com/api/content/home/intro")
 			.then(res => res.json())
 			.then(intro => this.setState({intro}
 			));
-		fetch("http://localhost:9000/api/content/home/break")
+		fetch("http://delivery-agility.com/api/content/home/break")
 			.then(res => res.json())
 			.then(bannerBreak => this.setState({bannerBreak}
 			));

@@ -8,7 +8,7 @@ export default function BlogArticles({match: {params: {id}}}: any): JSX.Element 
 	const router = useRouter();
 
 	useEffect((): any => {
-		fetch("http://localhost:9000/api/blog")
+		fetch("http://delivery-agility.com/api/blog")
 			.then(res => res.json())
 			.then(blog => setArticles({blog}));
 		return "";

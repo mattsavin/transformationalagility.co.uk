@@ -12,7 +12,7 @@ export default class contact extends React.Component<any, any> {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9000/api/content/contact/intro")
+		fetch("http://delivery-agility.com/api/content/contact/intro")
 			.then(res => res.json())
 			.then(intro => this.setState({intro}
 			));

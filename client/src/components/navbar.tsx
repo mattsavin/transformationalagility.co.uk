@@ -6,7 +6,7 @@ import { SidebarData } from "./sidebarData";
 import { IconContext } from "react-icons";
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
-import logo_small from "/images/logo_small.png";
+import logo_small from "../../public/images/logo_small.png";
 
 let rotation = 0;
 
