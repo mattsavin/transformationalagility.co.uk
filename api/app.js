@@ -6,7 +6,7 @@ const app = express();
 // eslint-disable-next-line no-undef
 const admin = require("firebase-admin");
 // eslint-disable-next-line no-undef
-const serviceAccount = require("./transformationalagility-firebase-adminsdk-4e03z-7c9668214c.json");
+const serviceAccount = require("./transformationalagility-firebase-adminsdk-4e03z-e3d78b474a.json");
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount)
