@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import * as PropTypes from "prop-types";
 
 interface Props {
@@ -21,9 +21,10 @@ export const BannerBreak: FunctionComponent<Props> = (props) => {
 
 				</p>
 				<div className={"center"}>
-					<Link to={props.buttonLocation}
-						className={"button center"}>
-						{props.buttonContent}
+					<Link href={"/about"}>
+						<a className={"button center"}>
+							{props.buttonContent}
+						</a>
 					</Link>
 				</div>
 			</div>

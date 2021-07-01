@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import { HashLink as Link } from "react-router-hash-link";
-import { useHistory } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 export default function UpdateProfile(): JSX.Element {
@@ -12,7 +12,7 @@ export default function UpdateProfile(): JSX.Element {
 	const { currentUser, updateEmail, updatePassword }: any = useAuth();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
-	const history = useHistory();
+	const router = useRouter();
 
 	function handleSubmit(e: any) {
 		e.preventDefault();
@@ -34,7 +34,7 @@ export default function UpdateProfile(): JSX.Element {
 		}
 
 		Promise.all(promises).then(() => {
-			history.push("/");
+			router.push("/");
 		}).catch(() => {
 			setError("failed to update account");
 		}).finally(() => {
@@ -65,7 +65,7 @@ export default function UpdateProfile(): JSX.Element {
 					<Button disabled={loading} type={"submit"} className={"form-button button"}>Update</Button>
 				</Form>
 				<div className={"w-100 text-center mt-2"}>
-					<p><Link to={"/dashboard"}>Cancel</Link></p>
+					<p><Link href={"/dashboard"}><a>Cancel</a></Link></p>
 				</div>
 			</div>
 		</>

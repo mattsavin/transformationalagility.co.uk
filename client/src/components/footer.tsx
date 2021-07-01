@@ -1,5 +1,5 @@
 import React from "react";
-import {HashLink as Link} from "react-router-hash-link";
+import Link from "next/link";
 import * as FAIcons from "react-icons/fa";
 
 export default function Footer (): JSX.Element {
@@ -9,11 +9,10 @@ export default function Footer (): JSX.Element {
 				<p>Connect with us on Social Media</p>
 				<br />
 				<div>
-					<Link to={{ pathname: "https://twitter.com/" }} target="_blank" className="social-icon twitter-icon">
-						<FAIcons.FaTwitter />
-					</Link>
-					<Link to={{ pathname: "https://twitter.com/" }} target="_blank" className="social-icon">
-						<FAIcons.FaTwitter />
+					<Link href="https://twitter.com" passHref={true}>
+						<a className={"social-icon twitter-icon"}>
+							<FAIcons.FaTwitter />
+						</a>
 					</Link>
 				</div>
 			</div>

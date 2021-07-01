@@ -2,21 +2,21 @@ import * as React  from "react";
 import { useState } from "react";
 import {Alert, Button} from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import { HashLink as Link } from "react-router-hash-link";
-import { useHistory } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 export default function Dashboard (): JSX.Element {
 	const [error, setError] = useState("");
 	const { currentUser, logout }: any = useAuth();
-	const history = useHistory();
+	const router = useRouter();
 
 	async function handleLogout() {
 		setError("");
 
 		try {
 			await logout();
-			history.push("/");
+			router.push("/");
 		} catch {
 			setError("Failed to log out!");
 		}
@@ -28,7 +28,9 @@ export default function Dashboard (): JSX.Element {
 				<h2 className={""}>Dashboard</h2>
 				{error && <Alert variant={"danger"}>{error}</Alert>}
 				<p><strong>Email: </strong> {currentUser.email}</p>
-				<Link to={"/update-profile"} className={"form-button button"}>Update Profile</Link>
+				<Link href={"/update-profile"}>
+					<a className={"form-button button"}>Update Profile</a>
+				</Link>
 				<Button className={"form-button button"} variant={"link"} onClick={handleLogout}>Log Out</Button>
 			</div>
 		</>

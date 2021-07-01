@@ -10,8 +10,8 @@ export default class about extends React.Component<any, any> {
 		};
 	}
 
-	componentDidMount() {
-		fetch("/api/content/about/intro")
+	componentDidMount(): void {
+		fetch("http://localhost:9000/api/content/about/intro")
 			.then(res => res.json())
 			.then(intro => this.setState({intro}
 			));

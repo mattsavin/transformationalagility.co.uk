@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import {HashLink as Link} from "react-router-hash-link";
+import Link from "next/link";
 
 export default function ForgotPassword(): JSX.Element {
 	const emailRef = useRef<HTMLInputElement | null>(null);
@@ -42,10 +42,14 @@ export default function ForgotPassword(): JSX.Element {
 					<Button disabled={loading} type={"submit"} className={"form-button button"}>Reset Password</Button>
 				</Form>
 				<div className={""}>
-					<Link to={"/login"}>Login</Link>
+					<Link href={"/login"}>
+						<a>Login</a>
+					</Link>
 				</div>
 				<div className={""}>
-					<p>Need an account? <Link to={"/signup"}>Sign Up</Link></p>
+					<p>Need an account? <Link href={"/signup"}>
+						<a>Sign Up</a>
+					</Link></p>
 				</div>
 			</div>
 		</>

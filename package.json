@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "start": "node ./app.js",
-    "concurrently": "concurrently \"cd api && npm run nodemon\" \"cd client && npm run start\""
+    "concurrently": "concurrently \"cd api && npm run nodemon\" \"cd client && npm run dev\""
   },
   "dependencies": {
     "concurrently": "^6.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint": "^7.29.0"
   }
 }

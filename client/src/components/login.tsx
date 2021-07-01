@@ -1,8 +1,8 @@
 import React, {useRef, useState} from "react";
 import {Form, Button, Alert} from "react-bootstrap";
 import {useAuth} from "../contexts/AuthContext";
-import {HashLink as Link} from "react-router-hash-link";
-import {useHistory} from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Login() {
 	const emailRef = useRef<HTMLInputElement | null>(null);
@@ -10,7 +10,7 @@ export default function Login() {
 	const {login}: any = useAuth();
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
-	const history = useHistory();
+	const router = useRouter();
 
 	async function handleSubmit(e: any) {
 		e.preventDefault();
@@ -21,7 +21,7 @@ export default function Login() {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
 			await login(emailRef.current.value, passwordRef.current.value);
-			history.push("/");
+			router.push("/");
 		} catch {
 			setError("Failed to log in!");
 		}
@@ -46,10 +46,12 @@ export default function Login() {
 					<Button disabled={loading} type={"submit"} className={"form-button button"}>Log In</Button>
 				</Form>
 				<div className={""}>
-					<Link to={"/forgot-password"}>Forgot Password?</Link>
+					<Link href={"/forgot-password"}>
+						<a>Forgot password?</a>
+					</Link>
 				</div>
 				<div className={""}>
-					<p>Need an account? <Link to={"/signup"}>Sign Up</Link></p>
+					<p>Need an account? <Link href={"/signup"}><a>Sign Up</a></Link></p>
 				</div>
 			</div>
 		</>

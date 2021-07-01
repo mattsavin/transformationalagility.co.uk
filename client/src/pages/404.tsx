@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-export default function NotFound() {
+export default function NotFound(): JSX.Element {
 	return (
 		<div className={"not-found"}>
 			<h1>404 not found!</h1>
-			<Link to="/">Click here to return to the homepage</Link>
+			<Link href="/"><a>Click here to return to the homepage</a></Link>
 		</div>
 	);
 }

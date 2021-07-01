@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import * as FAIcons from "react-icons/fa";
 import * as AIIcons from "react-icons/ai";
-import { HashLink as Link } from "react-router-hash-link";
+import Link from "next/link";
 import { SidebarData } from "./sidebarData";
 import { IconContext } from "react-icons";
-import logo from "../images/logo.png";
-import logo_small from "../images/logo_small.png";
+import Image from "next/image";
+import logo from "../../public/images/logo.png";
+import logo_small from "/images/logo_small.png";
 
 let rotation = 0;
 
@@ -25,14 +26,20 @@ function Navbar(): JSX.Element {
 			<IconContext.Provider value={{color: "#fff"}}>
 				<div className="navbar">
 					<div className={"menu-bars"}>
-						<Link to="#">
-							<FAIcons.FaAngleDoubleRight onClick={showSidebar} id={"navArrows"}/>
+						<Link href="">
+							<a>
+								<FAIcons.FaAngleDoubleRight onClick={showSidebar} id={"navArrows"}/>
+							</a>
 						</Link>
 					</div>
 
 					<div className="title">
-						<Link to="/#top"><img src={logo} alt="Transformational Agility Logo" className="desktop"/></Link>
-						<Link to="/#top"><img src={logo_small} alt="Transformational Agility Logo" className="mobile"/></Link>
+						<Link href="/"><Image src={logo} alt="Transformational Agility Logo"/>
+							<a className={"desktop"}></a>
+						</Link>
+						<Link href="/"><Image src={logo_small} alt="Transformational Agility Logo"/>
+							<a className={"mobile"}></a>
+						</Link>
 					</div>
 					<div className={"menu-bars"}> </div>
 				</div>
@@ -41,8 +48,10 @@ function Navbar(): JSX.Element {
 					<ul className="nav-menu-items" onClick={showSidebar}>
 						<li className="navbar-toggle">
 							<div className={"menu-bars"}>
-								<Link to="#" className="menu-bars">
-									<AIIcons.AiOutlineClose />
+								<Link href="#">
+									<a className={"menu-bars"}>
+										<AIIcons.AiOutlineClose />
+									</a>
 								</Link>
 							</div>
 
@@ -50,9 +59,11 @@ function Navbar(): JSX.Element {
 						{SidebarData.map((item, index) => {
 							return (
 								<li key={index} className={item.cName}>
-									<Link to={`${item.path}#top`}>
-										{item.icon}
-										<span>{item.title}</span>
+									<Link href={`${item.path}#top`}>
+										<a>
+											{item.icon}
+											<span>{item.title}</span>
+										</a>
 									</Link>
 								</li>
 							);

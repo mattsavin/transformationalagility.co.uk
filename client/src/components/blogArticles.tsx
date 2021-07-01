@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from "react";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 // eslint-disable-next-line react/display-name,react/prop-types,@typescript-eslint/ban-ts-comment
 export default function BlogArticles({match: {params: {id}}}: any): JSX.Element {
 	const [articles, setArticles] = useState<any>({});
+	const router = useRouter();
 
 	useEffect((): any => {
-		fetch("/api/blog")
+		fetch("http://localhost:9000/api/blog")
 			.then(res => res.json())
 			.then(blog => setArticles({blog}));
 		return "";
@@ -15,7 +16,9 @@ export default function BlogArticles({match: {params: {id}}}: any): JSX.Element 
 	
 	id = parseInt(id);
 	if (id != 0 && !id) {
-		return <Redirect to={{pathname: "/404"}} />;
+		useEffect((): any => {
+			router.push("/404");
+		});
 	}
 
 	if (articles.blog) {
@@ -23,7 +26,7 @@ export default function BlogArticles({match: {params: {id}}}: any): JSX.Element 
 		return(
 			<div className={"blog-entry"}>
 				<div className={"blog-title"}>
-					<Link to={"/blog"}>Back</Link>
+					<Link href={"/blog"}>Back</Link>
 					<h1>{blog.Title}</h1>
 				</div>
 				<div className={"blog-image"}>

@@ -1,4 +1,4 @@
-import { HashLink as Link } from "react-router-hash-link";
+import Link from "next/link";
 import * as React from "react";
 import * as path from "path";
 import * as PropTypes from "prop-types";
@@ -23,8 +23,10 @@ export function Boxes(props: any): JSX.Element {
 								{props.boxes[key].content}
 							</p>
 							<div className={"center"}>
-								<Link to={`${props.boxes[key].buttonLocation}#top`} className={"button box-button center"}>
-									{props.boxes[key].buttonContent}
+								<Link href={`${props.boxes[key].buttonLocation}`}>
+									<a className={"button box-button center"}>
+										{props.boxes[key].buttonContent}
+									</a>
 								</Link>
 							</div>
 						</div>

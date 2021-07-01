@@ -1,11 +1,17 @@
-import { HashLink as Link } from "react-router-hash-link";
+import Link from "next/link";
 import * as React from "react";
 import nl2br from "react-nl2br";
 
 export const Welcome: React.FC<Props> = (props: any) => {
-	const button = <Link to={props.buttonLocation} className={`button introduction-button center ${props.buttonClassName}`}>
-		{props.buttonContent}
-	</Link>;
+	let button;
+
+	if (props.buttonLocation) {
+		button = <Link href={"/contact"}>
+			<a className={`button introduction-button center ${props.buttonClassName}`}>
+				{props.buttonContent}
+			</a>
+		</Link>;
+	}
 	return (
 		<>
 			<div className={"parallax welcome welcome-" + props.cssClass}>
