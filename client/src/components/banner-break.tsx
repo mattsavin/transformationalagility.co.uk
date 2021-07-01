@@ -21,7 +21,7 @@ export const BannerBreak: FunctionComponent<Props> = (props) => {
 
 				</p>
 				<div className={"center"}>
-					<Link href={props.buttonLocation}>
+					<Link href={props.buttonLocation ? props.buttonLocation : "/about"}>
 						<a className={"button center"}>
 							{props.buttonContent}
 						</a>

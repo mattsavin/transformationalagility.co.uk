@@ -26,6 +26,7 @@ yarn-error.log*
 /api/config/keys.js
 /api/transformationalagility-firebase-adminsdk-4e03z-0824c121e6.json
 /api/transformationalagility-firebase-adminsdk*
+/api/transformationalagility-*
 
 # codestream
 
