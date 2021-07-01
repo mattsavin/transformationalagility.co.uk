@@ -9,7 +9,7 @@ export default function BlogArticles(): JSX.Element {
 	let { id }: any = router.query;
 
 	useEffect((): any => {
-		fetch("http://delivery-agility.com/api/blog")
+		fetch("/api/blog")
 			.then(res => res.json())
 			.then(blog => setArticles({blog}));
 		return "";

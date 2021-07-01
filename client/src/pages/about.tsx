@@ -11,7 +11,7 @@ export default class about extends React.Component<any, any> {
 	}
 
 	componentDidMount(): void {
-		fetch("http://delivery-agility.com/api/content/about/intro")
+		fetch("/api/content/about/intro")
 			.then(res => res.json())
 			.then(intro => this.setState({intro}
 			));

@@ -12,7 +12,7 @@ export default class BlogArticles extends Component<any, any> {
 	}
 
 	componentDidMount() {
-		fetch("http://delivery-agility.com/api/blog")
+		fetch("/api/blog")
 			.then(res => res.json())
 			.then(blog => this.setState({blog}));
 	}

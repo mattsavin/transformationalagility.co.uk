@@ -13,7 +13,7 @@ export default class CaseStudies extends Component<any, any> {
 	}
 
 	componentDidMount() {
-		fetch("http://delivery-agility.com/api/content/home")
+		fetch("/api/content/home")
 			.then(res => res.json())
 			.then(db => this.setState({db}
 			));
