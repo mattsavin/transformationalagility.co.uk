@@ -8,6 +8,7 @@ export default function MyApp({ Component, pageProps }: any): JSX.Element {
 	return (
 		<>
 			<AuthProvider>
+				<Navbar />
 				<Component {...pageProps} />
 			</AuthProvider>
 		</>
