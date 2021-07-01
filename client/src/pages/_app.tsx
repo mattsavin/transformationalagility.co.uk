@@ -1,12 +1,15 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import { AuthProvider } from "../contexts/AuthContext";
 import "../css/App.css";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
 export default function MyApp({ Component, pageProps }: any): JSX.Element {
 	return (
 		<>
-			<Component {...pageProps} />
+			<AuthProvider>
+				<Component {...pageProps} />
+			</AuthProvider>
 		</>
 	);
 }
