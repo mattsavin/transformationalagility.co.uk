@@ -6,7 +6,7 @@ export const Welcome: React.FC<Props> = (props: any) => {
 	let button;
 
 	if (props.buttonLocation) {
-		button = <Link href={"/contact"}>
+		button = <Link href={props.buttonLocation}>
 			<a className={`button introduction-button center ${props.buttonClassName}`}>
 				{props.buttonContent}
 			</a>
