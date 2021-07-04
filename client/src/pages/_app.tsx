@@ -2,11 +2,16 @@ import React from "react";
 import Navbar from "../components/navbar";
 import { AuthProvider } from "../contexts/AuthContext";
 import "../css/App.css";
+import Head from "next/head";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
 export default function MyApp({ Component, pageProps }: any): JSX.Element {
 	return (
 		<>
+			<Head>
+				<title>Transformational Agility</title>
+			</Head>
+			<noscript>You need to enable JavaScript to be able to run this app.</noscript>
 			<AuthProvider>
 				<Navbar />
 				<Component {...pageProps} />
