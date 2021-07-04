@@ -34,12 +34,8 @@ function Navbar(): JSX.Element {
 					</div>
 
 					<div className="title">
-						<Link href="/">
-							<a className={"desktop"}><Image src={logo} alt="Transformational Agility Logo"/></a>
-						</Link>
-						<Link href="/">
-							<a className={"mobile"}><Image src={logo_small} alt="Transformational Agility Logo"/></a>
-						</Link>
+						<a className={"desktop"} href="/"><img src="/images/logo.png" alt="Transformational Agility Logo"/></a>
+						<a href="/"><img src="/images/logo_small.png" className={"mobile"} alt="Transformational Agility Logo"/></a>
 					</div>
 					<div className={"menu-bars"}> </div>
 				</div>

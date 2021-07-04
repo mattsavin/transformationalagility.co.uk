@@ -354,6 +354,7 @@ span {
 
 .title {
     color: #ffffff;
+    display: flex;
     margin: auto;
     text-align: center;
     text-justify: distribute;
@@ -363,7 +364,6 @@ span {
     text-decoration: none;
     color: whitesmoke;
     padding: 16px;
-    border-radius: 4px;
 }
 
 .mobile {
