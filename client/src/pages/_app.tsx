@@ -10,6 +10,8 @@ export default function MyApp({ Component, pageProps }: any): JSX.Element {
 		<>
 			<Head>
 				<title>Transformational Agility</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="shortcut icon" type="image/png" href="/images/logo_small.png" />
 			</Head>
 			<noscript>You need to enable JavaScript to be able to run this app.</noscript>
 			<AuthProvider>

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // eslint-disable-next-line react/display-name,react/prop-types,@typescript-eslint/ban-ts-comment
 export default function BlogArticles(): JSX.Element {
@@ -21,6 +22,11 @@ export default function BlogArticles(): JSX.Element {
 		const blog = Object.assign({}, articles.blog[id - 1]);
 		return(
 			<div className={"blog-entry"}>
+				<Head>
+					<title>{blog.title ? `Transformational Agility Blog: ${blog.title}` : "Transformational Agility Blog"}</title>
+					<meta name="author" content={blog.author} />
+					<meta name="description" content={blog.Content} />
+				</Head>
 				<div className={"blog-title"}>
 					<Link href={"/blog"}>Back</Link>
 					<h1>{blog.Title}</h1>
