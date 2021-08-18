@@ -12,7 +12,7 @@ export function ContactInfo (): JSX.Element {
 					<div className="contact-entry">
 						<RIIcons.RiMailSendLine className="contact-icon"/>
 						<p>
-							<a href="mailto:example@example.com">Email Support</a>
+							<a href="mailto:transformationagility@gmail.com">Get in Touch</a>
 						</p>
 					</div>
 				</div>
